@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Design Link Ranker</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+        .stats {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 30px;
+        }
+        .link-table {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            text-align: left;
+            padding: 16px 20px;
+            background: #f8fafc;
+            font-weight: 600;
+            color: #475569;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #eef2f6;
+            vertical-align: middle;
+        }
+        tr:hover {
+            background: #fafbff;
+        }
+        .score {
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .url-cell {
+            max-width: 400px;
+            word-break: break-all;
+        }
+        .url-cell a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .url-cell a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            background: #eef2ff;
+            border: none;
+            color: #4f46e5;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+        .btn:hover {
+            background: #4f46e5;
+            color: white;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background: white;
+            width: 80%;
+            max-width: 900px;
+            max-height: 80vh;
+            border-radius: 20px;
+            padding: 25px;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #94a3b8;
+        }
+        .close-btn:hover { color: #0f172a; }
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1e293b;
+            padding-right: 30px;
+        }
+        .modal-text {
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #334155;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .refresh-info {
+            font-size: 13px;
+            color: #64748b;
+            margin-left: 15px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🏆 System Design Link Ranker</h1>
+    <div class="stats">
+        <div>📚 Total Links: <span id="total-links">-</span></div>
+        <div>📊 Avg Score: <span id="avg-score">-</span></div>
+        <div class="refresh-info">Auto-refreshes every 3 hours</div>
+    </div>
+    <div class="link-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Score</th>
+                    <th>Title / URL</th>
+                    <th>Extracted</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="links-body">
+                <tr><td colspan="5" class="loading">Loading rankings...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer">
+        Data refreshes automatically · Last update: <span id="last-update">-</span>
+    </div>
+</div>
+
+<!-- Modal for text display -->
+<div class="modal" id="textModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-title" id="modal-title">Extracted Text</div>
+        <div class="modal-text" id="modal-text">Loading...</div>
+    </div>
+</div>
+
+<script>
+    let refreshInterval = 3 * 60 * 60 * 1000; // 3 hours
+
+    async function fetchLinks() {
+        try {
+            const res = await fetch('/api/links');
+            const links = await res.json();
+            renderLinks(links);
+            document.getElementById('last-update').textContent = new Date().toLocaleString();
+        } catch (err) {
+            console.error('Failed to fetch links', err);
+        }
+    }
+
+    async function fetchStats() {
+        try {
+            const res = await fetch('/api/stats');
+            const stats = await res.json();
+            document.getElementById('total-links').textContent = stats.total_links;
+            document.getElementById('avg-score').textContent = stats.avg_score;
+        } catch (err) {
+            console.error('Stats error', err);
+        }
+    }
+
+    function renderLinks(links) {
+        const tbody = document.getElementById('links-body');
+        if (!links.length) {
+            tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:40px;">No links extracted yet. Run the crawler and extractor first.</td></tr>';
+            return;
+        }
+        let html = '';
+        links.forEach((link, idx) => {
+            const rank = idx + 1;
+            const title = link.title || link.url;
+            const extractedDate = link.extracted_at ? new Date(link.extracted_at).toLocaleDateString() : 'pending';
+            html += `<tr>
+                <td><strong>#${rank}</strong></td>
+                <td><span class="score">${link.score.toFixed(2)}</span></td>
+                <td class="url-cell">
+                    <a href="${link.url}" target="_blank" rel="noopener">${escapeHtml(title)}</a>
+                </td>
+                <td>${extractedDate}</td>
+                <td>
+                    <button class="btn" onclick="showText('${encodeURIComponent(link.url)}', '${escapeHtml(title).replace(/'/g, "\\'")}')">📄 View Text</button>
+                </td>
+            </tr>`;
+        });
+        tbody.innerHTML = html;
+    }
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    async function showText(urlEncoded, title) {
+        const modal = document.getElementById('textModal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalText = document.getElementById('modal-text');
+
+        modalTitle.textContent = decodeURIComponent(title) || 'Extracted Content';
+        modalText.textContent = 'Loading...';
+        modal.style.display = 'flex';
+
+        try {
+            const res = await fetch(`/api/content?url=${urlEncoded}`);
+            const data = await res.json();
+            modalText.textContent = data.text || '(No text content available)';
+        } catch (err) {
+            modalText.textContent = 'Error loading content.';
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('textModal').style.display = 'none';
+    }
+
+    // Close modal on background click
+    window.onclick = function(event) {
+        const modal = document.getElementById('textModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    // Initial load
+    fetchStats();
+    fetchLinks();
+
+    // Set up auto-refresh
+    setInterval(() => {
+        fetchStats();
+        fetchLinks();
+    }, refreshInterval);
+</script>
+</body>
+</html>

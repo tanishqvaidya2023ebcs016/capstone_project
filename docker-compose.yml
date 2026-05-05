@@ -1,0 +1,114 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: local-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  queue-server:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    container_name: local-queue-server
+    ports:
+      - "0.0.0.0:50051:50051"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - GRPC_PORT=50051
+      # 3 machines × 30 URLs/min = 90 URLs/min total, 33% each
+      - MAX_DEQUEUE_PER_MINUTE=30
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: python grpc_server.py
+    restart: unless-stopped
+
+  file-server:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    container_name: local-file-server
+    ports:
+      - "0.0.0.0:50052:50052"
+    environment:
+      - OUTPUT_FILE=/app/output/grpc_links.txt
+      - GRPC_PORT=50052
+    volumes:
+      - ./output:/app/output
+    command: python grpc_file_server.py
+    restart: unless-stopped
+
+  crawler:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    container_name: local-crawler
+    environment:
+      - QUEUE_SERVER=queue-server:50051
+      - FILE_SERVER=file-server:50052
+      - CRAWLER_ID=crawler-mac
+      - MAX_URLS=500
+      - SEED_URLS=true
+      - CRAWLER_WORKERS=3
+      - DASHBOARD_URL=http://host.docker.internal:8080
+    depends_on:
+      - queue-server
+      - file-server
+    volumes:
+      - ./output:/app/output
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: python crawler.py
+    restart: unless-stopped
+
+  text-extractor:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    container_name: local-text-extractor
+    environment:
+      - LINKS_FILE=/app/output/links.txt
+      - GRPC_LINKS_FILE=/app/output/grpc_links.txt
+      - DB_FILE=/app/output/extracted.db
+      - POLL_INTERVAL=60
+      - RUN_ONCE=false
+    volumes:
+      - ./output:/app/output
+    depends_on:
+      - crawler
+    command: python text_extractor_worker.py
+    restart: unless-stopped
+
+  web-dashboard:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    container_name: local-web-dashboard
+    ports:
+      - "0.0.0.0:8080:5000"
+    environment:
+      - DB_FILE=/app/output/extracted.db
+      - LINKS_FILE=/app/output/links.txt
+      - GRPC_LINKS_FILE=/app/output/grpc_links.txt
+      - QUEUE_SERVER=queue-server:50051
+      - FILE_SERVER=file-server:50052
+    volumes:
+      - ./output:/app/output
+    depends_on:
+      - text-extractor
+    command: python web_server.py
+    restart: unless-stopped
+
+volumes:
+  redis_data:

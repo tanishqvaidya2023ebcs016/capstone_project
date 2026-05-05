@@ -1,0 +1,572 @@
+# 🏆 RANKED SYSTEM DESIGN LINKS
+# Score = (3.0×Source) + (2.5×Keywords) - (0.02×DaysOld)
+# Last Updated: 2026-04-27T14:16:37.287427
+# Total Links: 138
+====================================================================================================
+
+[   1] [SCORE:    6.50] [ crawler-mac] https://cloud.google.com/solutions/dr-scenarios-for-applications
+       Source=0.80 Keywords=357 Age=630d Published=2024-08-05T00:00:00+00:00 Domain=cloud.google.com
+       Top: failover, disaster recovery, dns, replication, load balancer
+
+[   2] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/list_exports.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[   3] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/get_resource_policy.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[   4] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/update_global_table_settings.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[   5] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_global_table_settings.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[   6] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[   7] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/close.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[   8] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/ListTables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[   9] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/TableExists.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  10] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/table/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/batch_get_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  11] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/service-resource/dynamodb/waiter/ImportCompleted.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  12] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_limits.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  13] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/service-resource/dynamodb/client/dynamodb/table/dynamodb/waiter/dynamodb/client/update_table_replica_auto_scaling.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  14] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  15] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/list_exports.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  16] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/describe_export.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  17] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/delete_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  18] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/describe_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  19] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/table/dynamodb/client/dynamodb/client/put_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  20] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table_settings.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  21] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/table/dynamodb/waiter/dynamodb/client/create_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  22] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/export_table_to_point_in_time.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  23] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/describe_global_table_settings.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  24] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/waiter/TableNotExists.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  25] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/list_exports.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  26] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_table_replica_auto_scaling.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  27] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/describe_backup.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  28] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/import_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  29] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_time_to_live.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  30] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/describe_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  31] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/restore_table_from_backup.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  32] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_global_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  33] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/export_table_to_point_in_time.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  34] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/TableExists.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  35] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/ListTables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  36] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/update_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  37] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/describe_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  38] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/list_tags_of_resource.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  39] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/get_paginator.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  40] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/update_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  41] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/paginator/Query.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  42] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/delete_resource_policy.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  43] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/waiter/dynamodb/paginator/ListTables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  44] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/put_resource_policy.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  45] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/put_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  46] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/put_resource_policy.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  47] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/waiter/dynamodb/table/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/put_resource_policy.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  48] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/list_global_tables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  49] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table_settings.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  50] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/scan.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  51] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/disable_kinesis_streaming_destination.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  52] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/describe_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  53] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/untag_resource.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  54] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/table/dynamodb/paginator/ListTables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  55] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/describe_endpoints.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  56] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/create_global_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  57] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/describe_continuous_backups.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  58] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/get_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  59] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/paginator/ListTables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  60] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/update_time_to_live.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  61] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_limits.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  62] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/waiter/dynamodb/table/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/restore_table_from_backup.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  63] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/transact_write_items.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  64] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_import.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  65] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/waiter/ContributorInsightsEnabled.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  66] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/list_tags_of_resource.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  67] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/list_global_tables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  68] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/table/dynamodb/client/describe_continuous_backups.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  69] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  70] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/disable_kinesis_streaming_destination.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  71] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/describe_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  72] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/create_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  73] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/update_global_table_settings.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  74] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/delete_resource_policy.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  75] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_table_replica_auto_scaling.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  76] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/table/dynamodb/client/update_time_to_live.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  77] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/client/restore_table_to_point_in_time.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  78] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/describe_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  79] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/export_table_to_point_in_time.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  80] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/list_exports.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  81] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/create_global_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  82] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/restore_table_to_point_in_time.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  83] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/get_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  84] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/table/dynamodb/waiter/dynamodb/client/describe_import.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  85] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/table/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  86] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/update_global_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  87] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/delete_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  88] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/KinesisStreamingDestinationActive.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  89] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/paginator/dynamodb/paginator/ListBackups.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  90] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/KinesisStreamingDestinationActive.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  91] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_table_replica_auto_scaling.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  92] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/describe_table_replica_auto_scaling.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  93] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/query.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  94] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/describe_backup.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  95] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/update_continuous_backups.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  96] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/describe_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  97] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/table/dynamodb/paginator/Scan.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  98] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/client/dynamodb/client/enable_kinesis_streaming_destination.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[  99] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/restore_table_to_point_in_time.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 100] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/update_time_to_live.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 101] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/ContributorInsightsEnabled.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 102] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/list_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 103] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/update_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 104] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/get_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 105] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/batch_write_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 106] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_kinesis_streaming_destination.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 107] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/update_time_to_live.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 108] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/list_exports.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 109] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/put_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 110] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_global_table_settings.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 111] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/delete_backup.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 112] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/table/dynamodb/client/delete_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 113] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/untag_resource.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 114] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/untag_resource.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 115] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/table/index.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 116] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/list_global_tables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 117] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table_settings.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 118] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_global_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 119] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/paginator/ListBackups.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 120] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/import_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 121] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/delete_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 122] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/put_resource_policy.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 123] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/create_table.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 124] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/list_contributor_insights.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 125] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/close.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 126] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/put_item.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 127] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/ListTables.html
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
+       Top: dynamodb, availability, throughput, scalability, replication
+
+[ 128] [SCORE:    6.39] [ crawler-mac] https://cloud.google.com/armor/docs/verbose-logging
+       Source=0.80 Keywords=64 Age=180d Published=unknown Domain=cloud.google.com
+       Top: logging, load balancing
+
+[ 129] [SCORE:    6.06] [ crawler-mac] https://www.educative.io/courses/functional-web-development-elixir-otp-phoenix/what-lies-ahead
+       Source=0.70 Keywords=62 Age=180d Published=unknown Domain=educative.io
+       Top: sla, scalability, fault tolerance
+
+[ 130] [SCORE:    5.94] [ crawler-mac] https://cloud.google.com/anthos-config-management/docs/reference/errors
+       Source=0.80 Keywords=39 Age=180d Published=unknown Domain=cloud.google.com
+       Top: kubernetes, monitoring
+
+[ 131] [SCORE:    5.84] [ crawler-mac] https://cloud.google.com/learn/what-is-a-data-warehouse
+       Source=0.80 Keywords=35 Age=180d Published=unknown Domain=cloud.google.com
+       Top: scalability, sla, disaster recovery, throughput, relational database
+
+[ 132] [SCORE:    5.77] [ crawler-mac] https://cloud.google.com/bigquery/docs/row-level-security-intro
+       Source=0.80 Keywords=32 Age=180d Published=unknown Domain=cloud.google.com
+       Top: logging, monitoring, slo, sli
+
+[ 133] [SCORE:    5.77] [ crawler-mac] https://www.educative.io/blog/typescript-tutorial
+       Source=0.70 Keywords=45 Age=180d Published=unknown Domain=educative.io
+       Top: sli, sla, system design, graphql, slo
+
+[ 134] [SCORE:    5.61] [ crawler-mac] https://status.cloud.google.com/regional/africa
+       Source=0.80 Keywords=34 Age=180d Published=unknown Domain=status.cloud.google.com
+       Top: redis, kafka, load balancing, memcached, service mesh
+
+[ 135] [SCORE:    5.34] [ crawler-mac] https://cloud.google.com/kubernetes-engine/docs/how-to/node-pool-upgrade-strategies
+       Source=0.80 Keywords=18 Age=180d Published=unknown Domain=cloud.google.com
+       Top: kubernetes
+
+[ 136] [SCORE:    5.27] [ crawler-mac] https://docs.cloud.google.com/python/docs/reference/compute/1.14.1/google.cloud.compute_v1.types.StopAsyncReplicationDiskRequest
+       Source=0.80 Keywords=16 Age=180d Published=unknown Domain=docs.cloud.google.com
+       Top: replication
+
+[ 137] [SCORE:    5.27] [ crawler-mac] https://www.educative.io/blog/five-things-i-wish-id-known-about-git
+       Source=0.70 Keywords=25 Age=180d Published=unknown Domain=educative.io
+       Top: rest api, system design, sli, trade-off
+
+[ 138] [SCORE:    5.04] [ crawler-mac] https://research.google/people/106265
+       Source=0.80 Keywords=10 Age=180d Published=unknown Domain=research.google
+       Top: sla, redis
+
+====================================================================================================
+# SUMMARY
+# Total Links:  138
+# Highest:      6.50
+# Lowest:       5.04
+# Average:      6.38
+#
+# DOMAINS:
+#   docs.aws.amazon.com: 126 links
+#   cloud.google.com: 6 links
+#   educative.io: 3 links
+#   status.cloud.google.com: 1 links
+#   docs.cloud.google.com: 1 links
+#   research.google: 1 links

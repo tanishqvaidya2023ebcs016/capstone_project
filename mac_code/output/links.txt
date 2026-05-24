@@ -1,572 +1,898 @@
-# 🏆 RANKED SYSTEM DESIGN LINKS
-# Score = (3.0×Source) + (2.5×Keywords) - (0.02×DaysOld)
-# Last Updated: 2026-04-27T14:16:37.287427
-# Total Links: 138
+# RANKED SYSTEM DESIGN LINKS
+# Score = (3.0xSource) + (2.5xKeywords) - (0.02xDaysOld)
+# Last Updated: 2026-05-24T14:54:02.575506
+# Total Links: 219
 ====================================================================================================
 
-[   1] [SCORE:    6.50] [ crawler-mac] https://cloud.google.com/solutions/dr-scenarios-for-applications
-       Source=0.80 Keywords=357 Age=630d Published=2024-08-05T00:00:00+00:00 Domain=cloud.google.com
-       Top: failover, disaster recovery, dns, replication, load balancer
-
-[   2] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/list_exports.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[   3] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/get_resource_policy.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[   4] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/update_global_table_settings.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[   5] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_global_table_settings.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[   6] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[   7] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/close.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[   8] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/ListTables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[   9] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/TableExists.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  10] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/table/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/batch_get_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  11] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/service-resource/dynamodb/waiter/ImportCompleted.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  12] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_limits.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  13] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/service-resource/dynamodb/client/dynamodb/table/dynamodb/waiter/dynamodb/client/update_table_replica_auto_scaling.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  14] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  15] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/list_exports.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  16] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/describe_export.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  17] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/delete_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  18] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/describe_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  19] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/table/dynamodb/client/dynamodb/client/put_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  20] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table_settings.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  21] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/table/dynamodb/waiter/dynamodb/client/create_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  22] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/export_table_to_point_in_time.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  23] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/describe_global_table_settings.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  24] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/waiter/TableNotExists.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  25] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/list_exports.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  26] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_table_replica_auto_scaling.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  27] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/describe_backup.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  28] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/import_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  29] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_time_to_live.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  30] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/describe_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  31] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/restore_table_from_backup.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  32] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_global_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  33] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/export_table_to_point_in_time.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  34] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/TableExists.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  35] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/ListTables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  36] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/update_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  37] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/describe_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  38] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/list_tags_of_resource.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  39] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/get_paginator.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  40] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/update_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  41] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/paginator/Query.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  42] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/delete_resource_policy.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  43] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/waiter/dynamodb/paginator/ListTables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  44] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/put_resource_policy.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  45] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/put_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  46] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/put_resource_policy.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  47] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/waiter/dynamodb/table/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/put_resource_policy.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  48] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/list_global_tables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  49] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table_settings.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  50] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/scan.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  51] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/disable_kinesis_streaming_destination.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  52] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/describe_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  53] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/untag_resource.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  54] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/table/dynamodb/paginator/ListTables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  55] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/describe_endpoints.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  56] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/create_global_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  57] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/describe_continuous_backups.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  58] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/get_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  59] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/paginator/ListTables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  60] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/update_time_to_live.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  61] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_limits.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  62] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/waiter/dynamodb/table/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/restore_table_from_backup.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  63] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/transact_write_items.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  64] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_import.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  65] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/waiter/ContributorInsightsEnabled.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  66] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/list_tags_of_resource.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  67] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/list_global_tables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  68] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/table/dynamodb/client/describe_continuous_backups.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  69] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  70] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/disable_kinesis_streaming_destination.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  71] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/describe_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  72] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/create_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  73] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/update_global_table_settings.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  74] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/delete_resource_policy.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  75] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_table_replica_auto_scaling.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  76] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/table/dynamodb/client/update_time_to_live.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  77] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/client/restore_table_to_point_in_time.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  78] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/describe_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  79] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/export_table_to_point_in_time.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  80] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/list_exports.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  81] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/create_global_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  82] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/restore_table_to_point_in_time.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  83] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/get_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  84] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/table/dynamodb/waiter/dynamodb/client/describe_import.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  85] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/table/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  86] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/update_global_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  87] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/delete_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  88] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/KinesisStreamingDestinationActive.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  89] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/paginator/dynamodb/paginator/ListBackups.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  90] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/KinesisStreamingDestinationActive.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  91] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_table_replica_auto_scaling.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  92] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/describe_table_replica_auto_scaling.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  93] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/query.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  94] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/describe_backup.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  95] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/update_continuous_backups.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  96] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/describe_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  97] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/table/dynamodb/paginator/Scan.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  98] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/client/dynamodb/client/enable_kinesis_streaming_destination.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[  99] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/restore_table_to_point_in_time.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 100] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/update_time_to_live.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 101] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/ContributorInsightsEnabled.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 102] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/list_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 103] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/update_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 104] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/get_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 105] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/batch_write_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 106] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/describe_kinesis_streaming_destination.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 107] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/update_time_to_live.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 108] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/list_exports.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 109] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/put_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 110] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_global_table_settings.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 111] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/delete_backup.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 112] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/table/dynamodb/client/delete_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 113] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/untag_resource.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 114] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/untag_resource.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 115] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/table/index.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 116] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/list_global_tables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 117] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/describe_global_table_settings.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 118] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/update_global_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 119] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/paginator/ListBackups.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 120] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/import_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 121] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/delete_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 122] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/table/dynamodb/client/dynamodb/table/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/put_resource_policy.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 123] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/create_table.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 124] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/client/list_contributor_insights.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 125] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/client/close.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 126] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/put_item.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 127] [SCORE:    6.44] [ crawler-mac] https://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/dynamodb/waiter/dynamodb/client/dynamodb/service-resource/dynamodb/client/dynamodb/paginator/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/waiter/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/client/dynamodb/paginator/ListTables.html
-       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=docs.aws.amazon.com
-       Top: dynamodb, availability, throughput, scalability, replication
-
-[ 128] [SCORE:    6.39] [ crawler-mac] https://cloud.google.com/armor/docs/verbose-logging
-       Source=0.80 Keywords=64 Age=180d Published=unknown Domain=cloud.google.com
-       Top: logging, load balancing
-
-[ 129] [SCORE:    6.06] [ crawler-mac] https://www.educative.io/courses/functional-web-development-elixir-otp-phoenix/what-lies-ahead
-       Source=0.70 Keywords=62 Age=180d Published=unknown Domain=educative.io
-       Top: sla, scalability, fault tolerance
-
-[ 130] [SCORE:    5.94] [ crawler-mac] https://cloud.google.com/anthos-config-management/docs/reference/errors
-       Source=0.80 Keywords=39 Age=180d Published=unknown Domain=cloud.google.com
-       Top: kubernetes, monitoring
-
-[ 131] [SCORE:    5.84] [ crawler-mac] https://cloud.google.com/learn/what-is-a-data-warehouse
-       Source=0.80 Keywords=35 Age=180d Published=unknown Domain=cloud.google.com
-       Top: scalability, sla, disaster recovery, throughput, relational database
-
-[ 132] [SCORE:    5.77] [ crawler-mac] https://cloud.google.com/bigquery/docs/row-level-security-intro
-       Source=0.80 Keywords=32 Age=180d Published=unknown Domain=cloud.google.com
-       Top: logging, monitoring, slo, sli
-
-[ 133] [SCORE:    5.77] [ crawler-mac] https://www.educative.io/blog/typescript-tutorial
-       Source=0.70 Keywords=45 Age=180d Published=unknown Domain=educative.io
-       Top: sli, sla, system design, graphql, slo
-
-[ 134] [SCORE:    5.61] [ crawler-mac] https://status.cloud.google.com/regional/africa
-       Source=0.80 Keywords=34 Age=180d Published=unknown Domain=status.cloud.google.com
-       Top: redis, kafka, load balancing, memcached, service mesh
-
-[ 135] [SCORE:    5.34] [ crawler-mac] https://cloud.google.com/kubernetes-engine/docs/how-to/node-pool-upgrade-strategies
-       Source=0.80 Keywords=18 Age=180d Published=unknown Domain=cloud.google.com
-       Top: kubernetes
-
-[ 136] [SCORE:    5.27] [ crawler-mac] https://docs.cloud.google.com/python/docs/reference/compute/1.14.1/google.cloud.compute_v1.types.StopAsyncReplicationDiskRequest
-       Source=0.80 Keywords=16 Age=180d Published=unknown Domain=docs.cloud.google.com
-       Top: replication
-
-[ 137] [SCORE:    5.27] [ crawler-mac] https://www.educative.io/blog/five-things-i-wish-id-known-about-git
+[   1] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/understanding-top-10-software-architecture-patterns
+       Source=0.95 Keywords=500 Age=180d Published=unknown Domain=designgurus.io
+       Top: software architecture, scalability, system design, microservices, rabbitmq
+
+[   2] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/course/grokking-system-design-fundamentals
+       Source=0.95 Keywords=698 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, load balancing, cap theorem, scalability
+
+[   3] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/50-advanced-system-design-interview-questions
+       Source=0.95 Keywords=1333 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, availability, consistency, microservices
+
+[   4] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/system-design-interview-amazon
+       Source=0.95 Keywords=1300 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, latency, scalability, consistency
+
+[   5] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/grokking-the-system-design-interview-5-lessons
+       Source=0.95 Keywords=508 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, trade-off, scalability, caching, sla
+
+[   6] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/meta-system-design-vs-product-design
+       Source=0.95 Keywords=703 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, news feed, consistency, scalability
+
+[   7] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/microsoft-system-design-interview-questions
+       Source=0.95 Keywords=1316 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, trade-off, scalability, latency, consistency
+
+[   8] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/top-12-system-design-trade-offs-every-interviewee-must-master-in-2025
+       Source=0.95 Keywords=1066 Age=180d Published=unknown Domain=designgurus.io
+       Top: trade-off, system design, consistency, caching, latency
+
+[   9] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/system-design-interview-questions
+       Source=0.95 Keywords=3603 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, consistency, scalability, availability
+
+[  10] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/scaling-101-comprehensive-learning-for-large-system-designs
+       Source=0.95 Keywords=849 Age=180d Published=unknown Domain=designgurus.io
+       Top: caching, system design, sharding, load balancer, load balancing
+
+[  11] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/google-system-design-interview-prep
+       Source=0.95 Keywords=570 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, scalability, tradeoff, fault tolerance, distributed system
+
+[  12] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/database-sharding-guide-2026
+       Source=0.95 Keywords=479 Age=180d Published=unknown Domain=designgurus.io
+       Top: sharding, database sharding, system design, horizontal scaling, sla
+
+[  13] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/data-replication-strategies-system-design
+       Source=0.95 Keywords=493 Age=180d Published=unknown Domain=designgurus.io
+       Top: replication, system design, slo, availability, throughput
+
+[  14] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/sql-vs-nosql-key-differences
+       Source=0.95 Keywords=2247 Age=180d Published=unknown Domain=designgurus.io
+       Top: nosql, consistency, acid, eventual consistency, scalability
+
+[  15] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/system-design-interview-faqs
+       Source=0.95 Keywords=1383 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, consistency, caching, message queue, nosql
+
+[  16] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/kafka-streams-apache-flink-apache-storm
+       Source=0.95 Keywords=754 Age=180d Published=unknown Domain=designgurus.io
+       Top: kafka, system design, message broker, latency, sla
+
+[  17] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/design-chat-application
+       Source=0.95 Keywords=886 Age=180d Published=unknown Domain=designgurus.io
+       Top: websocket, system design, sharding, kafka, long polling
+
+[  18] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/grokking-system-design
+       Source=0.95 Keywords=791 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, trade-off, caching, sla, nosql
+
+[  19] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/system-design-interview-pdf
+       Source=0.95 Keywords=1225 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, microservices, scalability, nosql
+
+[  20] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/system-design-tutorial-for-beginners
+       Source=0.95 Keywords=1965 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, scalability, consistency, availability
+
+[  21] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/19-essential-microservices-patterns-for-system-design-interviews
+       Source=0.95 Keywords=1216 Age=180d Published=unknown Domain=designgurus.io
+       Top: microservices, circuit breaker, api gateway, event sourcing, cqrs
+
+[  22] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/horizontally-scale-sql-databases
+       Source=0.95 Keywords=749 Age=180d Published=unknown Domain=designgurus.io
+       Top: sharding, horizontal scaling, consistency, system design, acid
+
+[  23] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/high-availability-system-design-basics
+       Source=0.95 Keywords=1694 Age=180d Published=unknown Domain=designgurus.io
+       Top: availability, high availability, system design, failover, load balancing
+
+[  24] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/eventual-vs-strong-consistency
+       Source=0.95 Keywords=484 Age=180d Published=unknown Domain=designgurus.io
+       Top: consistency, quorum, strong consistency, replication, system design
+
+[  25] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/system-design-interviews-at-google-meta-amazon
+       Source=0.95 Keywords=727 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, redis, trade-off, kafka
+
+[  26] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/system-design-interview-mistakes
+       Source=0.95 Keywords=501 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, cassandra, sharding, consistent hashing
+
+[  27] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/complex-system-design-tradeoffs
+       Source=0.95 Keywords=1066 Age=180d Published=unknown Domain=designgurus.io
+       Top: trade-off, system design, consistency, caching, latency
+
+[  28] [SCORE:    7.54] [ crawler-mac] https://designgurus.io/blog/system-design-cheat-sheet
+       Source=0.95 Keywords=1582 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, scalability, consistency, trade-off
+
+[  29] [SCORE:    7.54] [ crawler-mac] https://designgurus.io/blog/last-minute-system-design-prep-what-to-focus-on-right-now
+       Source=0.95 Keywords=866 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, scalability, trade-off, load balancing
+
+[  30] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/design-social-media-news-feed
+       Source=0.95 Keywords=638 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, sharding, news feed, kafka
+
+[  31] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/a-beginners-guide-to-distributed-systems
+       Source=0.95 Keywords=848 Age=180d Published=unknown Domain=designgurus.io
+       Top: distributed system, distributed systems, system design, scalability, availability
+
+[  32] [SCORE:    7.54] [ crawler-mac] https://highscalability.com/gossip-protocol-explained
+       Source=0.95 Keywords=994 Age=180d Published=unknown Domain=highscalability.com
+       Top: gossip protocol, distributed system, bandwidth, consistency, scalability
+
+[  33] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/10-common-microservices-anti-patterns
+       Source=0.95 Keywords=614 Age=180d Published=unknown Domain=designgurus.io
+       Top: microservices, consistency, system design, monitoring, observability
+
+[  34] [SCORE:    7.54] [ crawler-mac] https://www.designgurus.io/blog/system-design-cheat-sheet
+       Source=0.95 Keywords=1582 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, scalability, consistency, trade-off
+
+[  35] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/how-to-approach-system-design-question
+       Source=0.95 Keywords=371 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, trade-off, scalability, url shortener, caching
+
+[  36] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/long-tail-latency
+       Source=0.95 Keywords=362 Age=180d Published=unknown Domain=designgurus.io
+       Top: tail latency, latency, slo, system design, sla
+
+[  37] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/sys-design-distinguishes
+       Source=0.95 Keywords=299 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, trade-off, consistency, eventual consistency, kafka
+
+[  38] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/redis-guide
+       Source=0.95 Keywords=376 Age=180d Published=unknown Domain=designgurus.io
+       Top: redis, system design, caching, rate limiting, sla
+
+[  39] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/b-tree-vs-hash-tree-vs-r-tree
+       Source=0.95 Keywords=377 Age=180d Published=unknown Domain=designgurus.io
+       Top: b-tree, system design, slo, trade-off, nosql
+
+[  40] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/estimation-in-system-design-interviews
+       Source=0.95 Keywords=388 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, latency, bandwidth, video streaming, sla
+
+[  41] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/course/grokking-system-design-interview-ii
+       Source=0.95 Keywords=357 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, kafka, cassandra, caching, fault tolerance
+
+[  42] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/how-to-prepare-for-system-design-interview-2026
+       Source=0.95 Keywords=362 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, trade-off, timeline, load balancer, sharding
+
+[  43] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/design-parking-system
+       Source=0.95 Keywords=281 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, scalability, functional requirements, availability, payment system
+
+[  44] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/faang-system-design-interviews-strategies-from-experts
+       Source=0.95 Keywords=351 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, trade-off, caching, sla, scalability
+
+[  45] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/tech-interview-preparation-bootcamp
+       Source=0.95 Keywords=300 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, distributed system, distributed systems, design principles
+
+[  46] [SCORE:    7.53] [ crawler-mac] https://www.designgurus.io/blog/10-myths-about-microservices-architecture
+       Source=0.95 Keywords=362 Age=180d Published=unknown Domain=designgurus.io
+       Top: microservices, system design, availability, high availability, sla
+
+[  47] [SCORE:    7.52] [ crawler-mac] https://www.designgurus.io/blog/software-engineer-interview-preparation-complete-guide-tips
+       Source=0.95 Keywords=269 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, trade-off, sla, scalability
+
+[  48] [SCORE:    7.51] [ crawler-mac] https://www.designgurus.io/course/grokking-database-fundamentals-for-tech-interviews
+       Source=0.95 Keywords=221 Age=180d Published=unknown Domain=designgurus.io
+       Top: database design, system design, replication, consistency, fault tolerance
+
+[  49] [SCORE:    7.49] [ crawler-mac] https://www.designgurus.io/blog/top-3-chatgpt-prompts-to-learn-leetcode-patterns
+       Source=0.95 Keywords=196 Age=180d Published=unknown Domain=designgurus.io
+       Top: sli, system design, sla
+
+[  50] [SCORE:    7.47] [ crawler-mac] https://www.designgurus.io/blog/stateless-vs-stateful
+       Source=0.95 Keywords=181 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, scalability, sla, trade-off, load balancer
+
+[  51] [SCORE:    7.47] [ crawler-mac] https://www.designgurus.io/blog/best-system-design-github-resources
+       Source=0.95 Keywords=181 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, scalability, distributed system, distributed systems
+
+[  52] [SCORE:    7.46] [ crawler-mac] https://www.designgurus.io/blog/observer-vs-pub-sub-pattern
+       Source=0.95 Keywords=173 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, message queue, sla, distributed system, microservices
+
+[  53] [SCORE:    7.46] [ crawler-mac] http://martinfowler.com/eaaDev/EventSourcing.html
+       Source=0.95 Keywords=178 Age=180d Published=unknown Domain=martinfowler.com
+       Top: event sourcing, slo, logging, message queue, scalability
+
+[  54] [SCORE:    7.45] [ crawler-mac] https://www.designgurus.io/blog/mastering-the-system-design-interview-landing-your-dream-job
+       Source=0.95 Keywords=1086 Age=235d Published=2025-10-01T00:00:00+00:00 Domain=designgurus.io
+       Top: system design, caching, tradeoff, replication, consistency
+
+[  55] [SCORE:    7.45] [ crawler-mac] https://www.designgurus.io/blog/complete-system-design-roadmap-2025
+       Source=0.95 Keywords=1086 Age=235d Published=2025-10-01T00:00:00+00:00 Domain=designgurus.io
+       Top: system design, caching, tradeoff, replication, consistency
+
+[  56] [SCORE:    7.45] [ crawler-mac] https://www.designgurus.io/blog/how-to-clear-system-design-interview
+       Source=0.95 Keywords=1086 Age=235d Published=2025-10-01T00:00:00+00:00 Domain=designgurus.io
+       Top: system design, caching, tradeoff, replication, consistency
+
+[  57] [SCORE:    7.40] [ crawler-mac] https://www.designgurus.io/blog/normalization-vs-denormalization
+       Source=0.95 Keywords=147 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, database design, sla, consistency, slo
+
+[  58] [SCORE:    7.37] [ crawler-mac] https://www.designgurus.io/blog/sync-vs-async
+       Source=0.95 Keywords=135 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, slo, microservices, database replication
+
+[  59] [SCORE:    7.27] [ crawler-mac] https://www.designgurus.io/blog/design-recommendation-system
+       Source=0.95 Keywords=113 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, caching, sla, microservices, cassandra
+
+[  60] [SCORE:    7.10] [ crawler-mac] http://engineering.linkedin.com/apache-kafka/burrow-kafka-consumer-monitoring-reinvented
+       Source=0.85 Keywords=146 Age=180d Published=unknown Domain=engineering.linkedin.com
+       Top: kafka, monitoring, notification system, availability, slo
+
+[  61] [SCORE:    7.07] [ crawler-mac] https://www.designgurus.io/blog/things-to-do-one-day-before-coding-interview
+       Source=0.95 Keywords=84 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, scalability, load balancing, slo
+
+[  62] [SCORE:    7.06] [ crawler-mac] https://www.designgurus.io/blog/mastering-the-ai-powered-stack-the-new-must-have-skills-for-software-engineers
+       Source=0.95 Keywords=83 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, kubernetes, database design, caching
+
+[  63] [SCORE:    7.05] [ crawler-mac] https://www.designgurus.io/blog/faang-live-coding-interview-without-leetcode
+       Source=0.95 Keywords=82 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sli, sla, slo, trade-off
+
+[  64] [SCORE:    7.04] [ crawler-mac] https://www.designgurus.io/blog/coding-interview-cheatsheet
+       Source=0.95 Keywords=81 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, slo, sli, caching
+
+[  65] [SCORE:    7.03] [ crawler-mac] https://www.designgurus.io/blog/array-vs-linked-list
+       Source=0.95 Keywords=80 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, slo, sla, trade-off, sli
+
+[  66] [SCORE:    7.03] [ crawler-mac] https://research.google/people/aminvahdat
+       Source=0.80 Keywords=192 Age=180d Published=unknown Domain=research.google
+       Top: latency, slo, bandwidth, availability, bottleneck
+
+[  67] [SCORE:    6.99] [ crawler-mac] https://www.designgurus.io/blog/grokking-webhooks
+       Source=0.95 Keywords=76 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, cache invalidation, kafka, bandwidth
+
+[  68] [SCORE:    6.99] [ crawler-mac] https://www.designgurus.io/blog/dont-just-leetcode
+       Source=0.95 Keywords=76 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, slo, sli
+
+[  69] [SCORE:    6.99] [ crawler-mac] https://designgurus.io/blog/grokking-leetcode
+       Source=0.95 Keywords=76 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, slo, sli
+
+[  70] [SCORE:    6.89] [ crawler-mac] https://designgurus.io/blog/object-oriented-programming-oop
+       Source=0.95 Keywords=68 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, scalability, nosql, redundancy
+
+[  71] [SCORE:    6.87] [ crawler-mac] https://research.google/people/107687
+       Source=0.80 Keywords=122 Age=180d Published=unknown Domain=research.google
+       Top: throughput, latency, bandwidth, availability, trade-off
+
+[  72] [SCORE:    6.84] [ crawler-mac] https://designgurus.io/blog/deadlock-vs-livelock
+       Source=0.95 Keywords=64 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, sli, distributed system, distributed systems
+
+[  73] [SCORE:    6.81] [ crawler-mac] https://www.designgurus.io/blog/vibe-coding-guide
+       Source=0.95 Keywords=62 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, autocomplete, slo
+
+[  74] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/courses/grokking-modern-system-design-software-engineers-managers
+       Source=0.70 Keywords=1152 Age=180d Published=unknown Domain=educative.io
+       Top: system design, distributed system, distributed systems, scalability, trade-off
+
+[  75] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/blog/microservices-architecture-tutorial-all-you-need-to-get-started
+       Source=0.70 Keywords=535 Age=180d Published=unknown Domain=educative.io
+       Top: microservices, docker, system design, microservice architecture, api gateway
+
+[  76] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/blog/distributed-systems
+       Source=0.70 Keywords=684 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems, consistency, availability, replication
+
+[  77] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/blog/distributed-systems-considerations-tradeoffs
+       Source=0.70 Keywords=684 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems, consistency, availability, replication
+
+[  78] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/blog/facebook-system-design-interview
+       Source=0.70 Keywords=522 Age=180d Published=unknown Domain=educative.io
+       Top: system design, newsfeed, functional requirements, non-functional requirements, rate limiter
+
+[  79] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/blog/zoo-of-consistency-models
+       Source=0.70 Keywords=758 Age=180d Published=unknown Domain=educative.io
+       Top: consistency, linearizability, system design, consensus algorithm, distributed system
+
+[  80] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/blog/key-metrics-to-discuss-during-system-design-interviews
+       Source=0.70 Keywords=677 Age=180d Published=unknown Domain=educative.io
+       Top: system design, latency, availability, throughput, caching
+
+[  81] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/courses/grokking-the-principles-and-practices-of-advanced-system-design/introduction-to-spanner
+       Source=0.70 Keywords=449 Age=180d Published=unknown Domain=educative.io
+       Top: consistency, availability, nosql, scalability, high availability
+
+[  82] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/blog/docker-kubernetes-beginners-guide
+       Source=0.70 Keywords=737 Age=180d Published=unknown Domain=educative.io
+       Top: docker, kubernetes, system design, replication, availability
+
+[  83] [SCORE:    6.79] [ crawler-mac] https://www.educative.io/blog/docker-compose-tutorial
+       Source=0.70 Keywords=935 Age=180d Published=unknown Domain=educative.io
+       Top: docker, kubernetes, system design, rest api, redis
+
+[  84] [SCORE:    6.78] [ crawler-mac] https://www.educative.io/courses/mobile-system-design
+       Source=0.70 Keywords=296 Age=180d Published=unknown Domain=educative.io
+       Top: system design, newsfeed, chat application, google maps, performance optimization
+
+[  85] [SCORE:    6.78] [ crawler-mac] https://www.educative.io/courses/advanced-docker-techniques
+       Source=0.70 Keywords=280 Age=180d Published=unknown Domain=educative.io
+       Top: docker, kubernetes, microservice architecture, kafka, system design
+
+[  86] [SCORE:    6.78] [ crawler-mac] https://www.educative.io/blog/use-reshaded-for-system-design-interviews
+       Source=0.70 Keywords=301 Age=180d Published=unknown Domain=educative.io
+       Top: system design, functional requirements, non-functional requirements, cassandra, availability
+
+[  87] [SCORE:    6.77] [ crawler-mac] https://www.educative.io/blog/machine-learning-edge-system-design
+       Source=0.70 Keywords=241 Age=180d Published=unknown Domain=educative.io
+       Top: system design, distributed system, distributed systems, scalability, design principles
+
+[  88] [SCORE:    6.77] [ crawler-mac] https://www.educative.io/courses/grokking-frontend-system-design-interview
+       Source=0.70 Keywords=272 Age=180d Published=unknown Domain=educative.io
+       Top: system design, newsfeed, video streaming, chat application, functional requirements
+
+[  89] [SCORE:    6.76] [ crawler-mac] https://www.educative.io/courses/introduction-microservice-principles-concepts
+       Source=0.70 Keywords=231 Age=180d Published=unknown Domain=educative.io
+       Top: microservices, docker, system design, kubernetes, event driven
+
+[  90] [SCORE:    6.76] [ crawler-mac] https://www.educative.io/courses/building-resilient-event-driven-microservices-apps-in-dotnet-7
+       Source=0.70 Keywords=222 Age=180d Published=unknown Domain=educative.io
+       Top: microservices, observability, message broker, event driven, system design
+
+[  91] [SCORE:    6.76] [ crawler-mac] https://www.educative.io/courses/introduction-to-apache-cassandra
+       Source=0.70 Keywords=235 Age=180d Published=unknown Domain=educative.io
+       Top: cassandra, data modeling, consistency, system design, scalability
+
+[  92] [SCORE:    6.75] [ crawler-mac] https://www.educative.io/courses/system-design-interview-prep-crash-course/design-a-content-delivery-network-cdn
+       Source=0.70 Keywords=207 Age=180d Published=unknown Domain=educative.io
+       Top: cdn, functional requirements, non-functional requirements, availability, caching
+
+[  93] [SCORE:    6.75] [ crawler-mac] https://www.educative.io/courses/build-microservices-web-apps-with-rabbitmq-react-tsx-and-django
+       Source=0.70 Keywords=214 Age=180d Published=unknown Domain=educative.io
+       Top: microservices, rabbitmq, docker, event driven, system design
+
+[  94] [SCORE:    6.73] [ crawler-mac] https://www.educative.io/courses/generative-ai-system-design
+       Source=0.70 Keywords=193 Age=180d Published=unknown Domain=educative.io
+       Top: system design, tradeoff, design principles, caching, scalability
+
+[  95] [SCORE:    6.72] [ crawler-mac] https://research.google/people/105021
+       Source=0.80 Keywords=96 Age=180d Published=unknown Domain=research.google
+       Top: latency, throughput, tail latency, load balancing, availability
+
+[  96] [SCORE:    6.70] [ crawler-mac] http://martinfowler.com/eaaDev/RetroactiveEvent.html
+       Source=0.95 Keywords=55 Age=180d Published=unknown Domain=martinfowler.com
+       Top: event sourcing
+
+[  97] [SCORE:    6.69] [ crawler-mac] https://www.designgurus.io/blog/big-o-algorithm-complexity
+       Source=0.95 Keywords=54 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla
+
+[  98] [SCORE:    6.69] [ crawler-mac] https://designgurus.io/blog/top-20-coding-questions-to-pass-oracle-interview
+       Source=0.95 Keywords=54 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, relational database
+
+[  99] [SCORE:    6.68] [ crawler-mac] https://www.educative.io/courses/mobile-system-design/what-is-mobile-system-design
+       Source=0.70 Keywords=160 Age=180d Published=unknown Domain=educative.io
+       Top: system design, trade-off, scalability, availability, caching
+
+[ 100] [SCORE:    6.67] [ crawler-mac] https://www.educative.io/courses/advanced-system-design-interview-prep-crash-course/amazon-dynamodb
+       Source=0.70 Keywords=209 Age=180d Published=unknown Domain=educative.io
+       Top: dynamodb, nosql, availability, functional requirements, replication
+
+[ 101] [SCORE:    6.67] [ crawler-mac] https://www.educative.io/courses/system-design-interview-prep-crash-course/databases-in-distributed-systems
+       Source=0.70 Keywords=155 Age=180d Published=unknown Domain=educative.io
+       Top: relational database, file storage, replication, nosql, scalability
+
+[ 102] [SCORE:    6.66] [ crawler-mac] https://www.educative.io/courses/grokking-the-product-architecture-interview/unpacking-api-design
+       Source=0.70 Keywords=150 Age=180d Published=unknown Domain=educative.io
+       Top: api design, non-functional requirements, functional requirements, video streaming, scalability
+
+[ 103] [SCORE:    6.65] [ crawler-mac] https://www.educative.io/courses/generative-ai-system-design/parallelism-in-genai-models
+       Source=0.70 Keywords=144 Age=180d Published=unknown Domain=educative.io
+       Top: fault tolerance, replication, single point of failure, bottleneck, scalability
+
+[ 104] [SCORE:    6.61] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/data-partitioning
+       Source=0.70 Keywords=132 Age=180d Published=unknown Domain=educative.io
+       Top: sharding, data partitioning, bottleneck, consistent hashing, scalability
+
+[ 105] [SCORE:    6.60] [ crawler-mac] https://www.educative.io/courses/grokking-frontend-system-design-interview/the-redcaap-approach-for-designing-frontend-systems
+       Source=0.70 Keywords=131 Age=180d Published=unknown Domain=educative.io
+       Top: system design, scalability, functional requirements, api design, performance optimization
+
+[ 106] [SCORE:    6.54] [ crawler-mac] https://www.designgurus.io/blog/5-algorithms-every-developer-should-know-to-clear-coding-interviews-in-2024
+       Source=0.95 Keywords=46 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla, social network
+
+[ 107] [SCORE:    6.54] [ crawler-mac] https://www.educative.io/courses/distributed-systems-real-world
+       Source=0.70 Keywords=116 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems, system design, circuit breaker, load balancing
+
+[ 108] [SCORE:    6.54] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/conclusions
+       Source=0.70 Keywords=117 Age=180d Published=unknown Domain=educative.io
+       Top: system design, scalability, web crawler, latency, sharding
+
+[ 109] [SCORE:    6.53] [ crawler-mac] https://www.educative.io/courses/system-design-interview-prep-crash-course/design-a-blob-store
+       Source=0.70 Keywords=114 Age=180d Published=unknown Domain=educative.io
+       Top: functional requirements, non-functional requirements, replication, consistency, availability
+
+[ 110] [SCORE:    6.52] [ crawler-mac] https://www.designgurus.io/blog/why-everyone-must-practice-programming
+       Source=0.95 Keywords=45 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla
+
+[ 111] [SCORE:    6.51] [ crawler-mac] https://www.educative.io/blog/10-jobs-for-junior-developers
+       Source=0.70 Keywords=111 Age=180d Published=unknown Domain=educative.io
+       Top: system design, docker, sla, monitoring, scalability
+
+[ 112] [SCORE:    6.50] [ crawler-mac] http://engineering.linkedin.com/real-time-distributed-graph/using-set-cover-algorithm-optimize-query-latency-large-scale-distributed
+       Source=0.85 Keywords=61 Age=180d Published=unknown Domain=engineering.linkedin.com
+       Top: latency, caching, kafka, scalability, social network
+
+[ 113] [SCORE:    6.47] [ crawler-mac] https://research.google/people/author27276
+       Source=0.80 Keywords=70 Age=180d Published=unknown Domain=research.google
+       Top: bottleneck, latency, load balancing, availability, throughput
+
+[ 114] [SCORE:    6.46] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/requirements-of-the-typeahead-suggestion-systems-design
+       Source=0.70 Keywords=102 Age=180d Published=unknown Domain=educative.io
+       Top: typeahead, functional requirements, non-functional requirements, latency, bandwidth
+
+[ 115] [SCORE:    6.45] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/the-dos-and-donts-of-the-system-design-interview
+       Source=0.70 Keywords=101 Age=180d Published=unknown Domain=educative.io
+       Top: system design, trade-off, functional requirements, nosql, consistency
+
+[ 116] [SCORE:    6.45] [ crawler-mac] https://www.educative.io/courses/hackers-guide-scaling-python
+       Source=0.70 Keywords=101 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems, caching, rest api, system design
+
+[ 117] [SCORE:    6.45] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/requirements-of-instagrams-design
+       Source=0.70 Keywords=101 Age=180d Published=unknown Domain=educative.io
+       Top: news feed, functional requirements, latency, non-functional requirements, bandwidth
+
+[ 118] [SCORE:    6.44] [ crawler-mac] https://research.google/people/107181
+       Source=0.80 Keywords=68 Age=180d Published=unknown Domain=research.google
+       Top: latency, caching, tail latency, availability, throughput
+
+[ 119] [SCORE:    6.43] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/trade-offs-in-databases
+       Source=0.70 Keywords=98 Age=180d Published=unknown Domain=educative.io
+       Top: sharding, latency, database sharding, trade-off, vertical scaling
+
+[ 120] [SCORE:    6.42] [ crawler-mac] https://research.google/people/stephenstuart
+       Source=0.80 Keywords=66 Age=180d Published=unknown Domain=research.google
+       Top: bandwidth
+
+[ 121] [SCORE:    6.40] [ crawler-mac] https://www.educative.io/courses/developing-microservices-with-spring-boot
+       Source=0.70 Keywords=93 Age=180d Published=unknown Domain=educative.io
+       Top: system design, microservices, software architecture, database design, distributed system
+
+[ 122] [SCORE:    6.40] [ crawler-mac] https://www.educative.io/courses/grokking-frontend-system-design-interview/performance-in-frontend-systems
+       Source=0.70 Keywords=94 Age=180d Published=unknown Domain=educative.io
+       Top: slo, system design, scalability, functional requirements, e-commerce
+
+[ 123] [SCORE:    6.39] [ crawler-mac] https://www.educative.io/courses/system-design-interview-prep-crash-course/design-a-distributed-search
+       Source=0.70 Keywords=92 Age=180d Published=unknown Domain=educative.io
+       Top: functional requirements, non-functional requirements, scalability, replication, availability
+
+[ 124] [SCORE:    6.38] [ crawler-mac] https://research.google/people/chriskennelly
+       Source=0.80 Keywords=63 Age=180d Published=unknown Domain=research.google
+       Top: fault tolerance, throughput, bandwidth, trade-off, latency
+
+[ 125] [SCORE:    6.36] [ crawler-mac] https://www.educative.io/courses/web-development-interview-handbook
+       Source=0.70 Keywords=88 Age=180d Published=unknown Domain=educative.io
+       Top: system design, caching, search engine, rest api, dns
+
+[ 126] [SCORE:    6.36] [ crawler-mac] https://research.google/people/108238
+       Source=0.80 Keywords=62 Age=180d Published=unknown Domain=research.google
+       Top: latency, throughput, bandwidth, tail latency, availability
+
+[ 127] [SCORE:    6.33] [ crawler-mac] https://bytebytego.com/courses/system-design-interview
+       Source=1.00 Keywords=87 Age=180d Published=unknown Domain=bytebytego.com
+       Top: message queue, rate limiter, url shortener, chat system, notification system
+
+[ 128] [SCORE:    6.32] [ crawler-mac] https://www.designgurus.io/course/grokking-graph-algorithms-for-coding-interviews
+       Source=0.95 Keywords=36 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sla
+
+[ 129] [SCORE:    6.31] [ crawler-mac] https://www.educative.io/courses/grokking-the-principles-and-practices-of-advanced-system-design/introduction-to-distributed-file-systems
+       Source=0.70 Keywords=83 Age=180d Published=unknown Domain=educative.io
+       Top: scalability, availability, high availability, system design, distributed system
+
+[ 130] [SCORE:    6.28] [ crawler-mac] https://www.educative.io/courses/grokking-the-product-architecture-interview/introduction-to-apis
+       Source=0.70 Keywords=80 Age=180d Published=unknown Domain=educative.io
+       Top: api gateway, microservices, microservice architecture, rate limiting, google maps
+
+[ 131] [SCORE:    6.28] [ crawler-mac] https://www.educative.io/courses/system-design-deep-dive-real-world-distributed-systems/introduction-to-big-data-processing-systems
+       Source=0.70 Keywords=80 Age=180d Published=unknown Domain=educative.io
+       Top: latency, kafka, system design, timeline, throughput
+
+[ 132] [SCORE:    6.27] [ crawler-mac] https://www.educative.io/courses/system-design-interview-prep-crash-course/design-a-distributed-task-scheduler
+       Source=0.70 Keywords=79 Age=180d Published=unknown Domain=educative.io
+       Top: functional requirements, non-functional requirements, fault tolerance, fault tolerant, unique id generator
+
+[ 133] [SCORE:    6.27] [ crawler-mac] https://research.google/people/ankurjain
+       Source=0.80 Keywords=56 Age=180d Published=unknown Domain=research.google
+       Top: latency, video streaming, throughput, rate limiting, capacity estimation
+
+[ 134] [SCORE:    6.25] [ crawler-mac] https://www.educative.io/courses/highest-paid-software-engineer/triage-first
+       Source=0.70 Keywords=77 Age=180d Published=unknown Domain=educative.io
+       Top: circuit breaker, logging, latency, distributed tracing, timeline
+
+[ 135] [SCORE:    6.19] [ crawler-mac] https://www.educative.io/courses/system-design-interview-prep-crash-course/design-a-distributed-messaging-queue
+       Source=0.70 Keywords=72 Age=180d Published=unknown Domain=educative.io
+       Top: functional requirements, non-functional requirements, scalability, availability, load balancer
+
+[ 136] [SCORE:    6.19] [ crawler-mac] https://www.designgurus.io/course/grokking-python-fundamentals
+       Source=0.95 Keywords=31 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design, sli
+
+[ 137] [SCORE:    6.19] [ crawler-mac] https://www.educative.io/courses/mobile-system-design/mobile-vs-web-rethinking-system-design
+       Source=0.70 Keywords=72 Age=180d Published=unknown Domain=educative.io
+       Top: system design, slo, push notification, e-commerce, latency
+
+[ 138] [SCORE:    6.17] [ crawler-mac] https://www.educative.io/courses/web-development-interview-handbook/ajax
+       Source=0.70 Keywords=70 Age=180d Published=unknown Domain=educative.io
+       Top: websocket, long polling, chat application, news feed, social media
+
+[ 139] [SCORE:    6.12] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/evaluation-of-a-distributed-caches-design
+       Source=0.70 Keywords=66 Age=180d Published=unknown Domain=educative.io
+       Top: availability, consistent hashing, scalability, consistency, high availability
+
+[ 140] [SCORE:    6.10] [ crawler-mac] https://www.educative.io/courses/system-design-deep-dive-real-world-distributed-systems/introduction-to-key-value-stores
+       Source=0.70 Keywords=65 Age=180d Published=unknown Domain=educative.io
+       Top: nosql, dynamodb, system design, caching, timeline
+
+[ 141] [SCORE:    6.10] [ crawler-mac] https://www.educative.io/courses/grokking-the-product-architecture-interview/introduction-to-the-pub-sub-service
+       Source=0.70 Keywords=65 Age=180d Published=unknown Domain=educative.io
+       Top: microservices, replication, microservice architecture, message queue, kafka
+
+[ 142] [SCORE:    6.09] [ crawler-mac] https://www.educative.io/courses/grokking-coding-interview-in-python
+       Source=0.70 Keywords=64 Age=180d Published=unknown Domain=educative.io
+       Top: system design, slo, sli, distributed system
+
+[ 143] [SCORE:    6.08] [ crawler-mac] https://www.educative.io/courses/system-design-deep-dive-real-world-distributed-systems/introduction-to-concurrency-management
+       Source=0.70 Keywords=63 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems, consistency, system design, strong consistency
+
+[ 144] [SCORE:    6.05] [ crawler-mac] https://www.educative.io/courses/intermediate-javascript
+       Source=0.70 Keywords=61 Age=180d Published=unknown Domain=educative.io
+       Top: autocomplete, system design, rest api, caching
+
+[ 145] [SCORE:    6.04] [ crawler-mac] https://www.designgurus.io/course/grokking-javascript-fundamentals
+       Source=0.95 Keywords=27 Age=180d Published=unknown Domain=designgurus.io
+       Top: system design
+
+[ 146] [SCORE:    6.03] [ crawler-mac] https://www.educative.io/blog/best-paying-jobs-in-tech
+       Source=0.70 Keywords=60 Age=180d Published=unknown Domain=educative.io
+       Top: system design, microservices, trade-off, search engine, scalability
+
+[ 147] [SCORE:    6.02] [ crawler-mac] https://www.educative.io/courses/grokking-the-product-architecture-interview/requirements-of-the-messenger-api
+       Source=0.70 Keywords=78 Age=180d Published=unknown Domain=educative.io
+       Top: functional requirements, api design, latency, non-functional requirements, api gateway
+
+[ 148] [SCORE:    5.97] [ crawler-mac] https://www.educative.io/courses/distributed-systems-practitioners/fallacies-of-distributed-computing
+       Source=0.70 Keywords=56 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems, latency, bandwidth
+
+[ 149] [SCORE:    5.96] [ crawler-mac] https://research.google/pubs/a-practical-algorithm-for-balancing-the-max-min-fairness-and-throughput-objectives-in-traffic-engineering
+       Source=0.80 Keywords=40 Age=180d Published=unknown Domain=research.google
+       Top: throughput, trade-off, bandwidth
+
+[ 150] [SCORE:    5.95] [ crawler-mac] https://www.educative.io/blog/what-is-nodejs
+       Source=0.70 Keywords=55 Age=180d Published=unknown Domain=educative.io
+       Top: event driven, mongodb, system design, caching, redis
+
+[ 151] [SCORE:    5.94] [ crawler-mac] https://www.educative.io/courses/cpp-fundamentals-for-professionals
+       Source=0.70 Keywords=54 Age=180d Published=unknown Domain=educative.io
+       Top: docker, database design, system design, relational database
+
+[ 152] [SCORE:    5.93] [ crawler-mac] https://engineering.fb.com/2022/11/21/production-engineering/precision-time-protocol-at-meta
+       Source=0.85 Keywords=123 Age=1280d Published=2022-11-21T13:59:34+00:00 Domain=engineering.fb.com
+       Top: monitoring, linearizability, sharding, quorum, availability
+
+[ 153] [SCORE:    5.92] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/design-considerations-of-a-blob-store
+       Source=0.70 Keywords=53 Age=180d Published=unknown Domain=educative.io
+       Top: availability, replication, system design, sharding, caching
+
+[ 154] [SCORE:    5.88] [ crawler-mac] https://www.educative.io/courses/advanced-docker-techniques/deploying-apps-with-compose
+       Source=0.70 Keywords=51 Age=180d Published=unknown Domain=educative.io
+       Top: docker, redis
+
+[ 155] [SCORE:    5.87] [ crawler-mac] https://research.google/people/alexiriza
+       Source=0.80 Keywords=36 Age=180d Published=unknown Domain=research.google
+       Top: latency, tail latency, throughput, sla
+
+[ 156] [SCORE:    5.87] [ crawler-mac] https://research.google/people/106706
+       Source=0.80 Keywords=36 Age=180d Published=unknown Domain=research.google
+       Top: bandwidth, latency, scalability, availability, high availability
+
+[ 157] [SCORE:    5.81] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/system-design-the-pub-sub-abstraction
+       Source=0.70 Keywords=47 Age=180d Published=unknown Domain=educative.io
+       Top: system design, scalability, distributed system, distributed systems, microservices
+
+[ 158] [SCORE:    5.81] [ crawler-mac] http://engineering.linkedin.com/big-data/open-sourcing-cubert-high-performance-computation-engine-complex-big-data-analytics
+       Source=0.85 Keywords=28 Age=180d Published=unknown Domain=engineering.linkedin.com
+       Top: kafka, sla, caching, throughput
+
+[ 159] [SCORE:    5.79] [ crawler-mac] https://www.educative.io/blog/uber-backend-system-design
+       Source=0.70 Keywords=46 Age=180d Published=unknown Domain=educative.io
+       Top: functional requirements, non-functional requirements, system design, api design, bandwidth
+
+[ 160] [SCORE:    5.79] [ crawler-mac] https://www.educative.io/courses/agentic-ai-systems/agent-architecture-core-agent-components
+       Source=0.70 Keywords=46 Age=180d Published=unknown Domain=educative.io
+       Top: latency, system design, availability, timeline, scalability
+
+[ 161] [SCORE:    5.71] [ crawler-mac] https://www.educative.io/courses/distributed-systems-practitioners/introduction
+       Source=0.70 Keywords=42 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems
+
+[ 162] [SCORE:    5.69] [ crawler-mac] https://www.educative.io/courses/advanced-docker-techniques/what-to-expect
+       Source=0.70 Keywords=42 Age=180d Published=unknown Domain=educative.io
+       Top: docker, kubernetes
+
+[ 163] [SCORE:    5.66] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/introduction-to-distributed-system-failures
+       Source=0.70 Keywords=40 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems, system design, availability, monitoring
+
+[ 164] [SCORE:    5.66] [ crawler-mac] http://engineering.linkedin.com/datafu/datafus-hourglass-incremental-data-processing-hadoop
+       Source=0.85 Keywords=23 Age=180d Published=unknown Domain=engineering.linkedin.com
+       Top: sli, kubernetes
+
+[ 165] [SCORE:    5.64] [ crawler-mac] https://www.educative.io/courses/agentic-ai-systems
+       Source=0.70 Keywords=39 Age=180d Published=unknown Domain=educative.io
+       Top: system design, design principles
+
+[ 166] [SCORE:    5.62] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/system-design-yelp
+       Source=0.70 Keywords=38 Age=180d Published=unknown Domain=educative.io
+       Top: system design, latency, bandwidth, proximity service, non-functional requirements
+
+[ 167] [SCORE:    5.52] [ crawler-mac] https://www.educative.io/courses/html-for-front-end-interviews
+       Source=0.70 Keywords=34 Age=180d Published=unknown Domain=educative.io
+       Top: system design, software architecture, google maps, autocomplete
+
+[ 168] [SCORE:    5.52] [ crawler-mac] https://www.educative.io/blog/balance-software-engineer-mother
+       Source=0.70 Keywords=34 Age=180d Published=unknown Domain=educative.io
+       Top: bandwidth, system design, distributed system, distributed systems, slo
+
+[ 169] [SCORE:    5.49] [ crawler-mac] https://www.educative.io/courses/effective-software-development-enterprise-applications
+       Source=0.70 Keywords=33 Age=180d Published=unknown Domain=educative.io
+       Top: system design, software architecture, cqrs, scalability, microservices
+
+[ 170] [SCORE:    5.49] [ crawler-mac] https://www.educative.io/courses/css-theming-for-professionals
+       Source=0.70 Keywords=33 Age=180d Published=unknown Domain=educative.io
+       Top: system design, software architecture, autocomplete, e-commerce
+
+[ 171] [SCORE:    5.48] [ crawler-mac] https://research.google/people/author39745
+       Source=0.80 Keywords=22 Age=180d Published=unknown Domain=research.google
+       Top: latency, throughput, bottleneck, distributed system, distributed systems
+
+[ 172] [SCORE:    5.41] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/quiz-on-instagrams-design
+       Source=0.70 Keywords=30 Age=180d Published=unknown Domain=educative.io
+       Top: scalability, nosql, consistency, availability, latency
+
+[ 173] [SCORE:    5.38] [ crawler-mac] https://research.google/pubs/pub27897
+       Source=0.80 Keywords=19 Age=180d Published=unknown Domain=research.google
+       Top: distributed system, distributed systems, availability
+
+[ 174] [SCORE:    5.36] [ crawler-mac] https://www.educative.io/courses/guide-to-spring-and-spring-boot
+       Source=0.70 Keywords=28 Age=180d Published=unknown Domain=educative.io
+       Top: system design, microservices, api design, rest api, logging
+
+[ 175] [SCORE:    5.36] [ crawler-mac] https://www.educative.io/courses/vector-database
+       Source=0.70 Keywords=28 Age=180d Published=unknown Domain=educative.io
+       Top: system design, performance optimization, sla
+
+[ 176] [SCORE:    5.33] [ crawler-mac] https://www.educative.io/courses/modern-front-end-rails
+       Source=0.70 Keywords=27 Age=180d Published=unknown Domain=educative.io
+       Top: docker, system design
+
+[ 177] [SCORE:    5.24] [ crawler-mac] https://www.educative.io/courses/distributed-systems-practitioners/quiz-on-essentials-of-distributed-systems
+       Source=0.70 Keywords=24 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems
+
+[ 178] [SCORE:    5.24] [ crawler-mac] https://www.educative.io/courses/distributed-systems-practitioners/types-of-failures
+       Source=0.70 Keywords=24 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems
+
+[ 179] [SCORE:    5.24] [ crawler-mac] https://www.educative.io/courses/distributed-systems-practitioners/introduction-YQWmpxVMA9K
+       Source=0.70 Keywords=24 Age=180d Published=unknown Domain=educative.io
+       Top: distributed system, distributed systems
+
+[ 180] [SCORE:    5.24] [ crawler-mac] https://www.educative.io/blog/how-to-negotiate-salary-software-developer
+       Source=0.70 Keywords=24 Age=180d Published=unknown Domain=educative.io
+       Top: system design, sla, trade-off
+
+[ 181] [SCORE:    5.21] [ crawler-mac] https://www.educative.io/courses/grokking-the-system-design-interview/payment-service-and-fraud-detection-in-uber-design
+       Source=0.70 Keywords=23 Age=180d Published=unknown Domain=educative.io
+       Top: kafka, uber design, system design
+
+[ 182] [SCORE:    5.21] [ crawler-mac] https://www.educative.io/courses/effective-software-development-enterprise-applications/history-behind-inefficient-monoliths
+       Source=0.70 Keywords=23 Age=180d Published=unknown Domain=educative.io
+       Top: microservices, scalability, slo, distributed system, distributed systems
+
+[ 183] [SCORE:    5.17] [ crawler-mac] https://www.educative.io/courses/hackers-guide-scaling-python/project-solution-review
+       Source=0.70 Keywords=24 Age=180d Published=unknown Domain=educative.io
+       Top: redis
+
+[ 184] [SCORE:    5.11] [ crawler-mac] https://www.educative.io/courses/distributed-systems-practitioners/recording-programs-execution
+       Source=0.70 Keywords=20 Age=180d Published=unknown Domain=educative.io
+       Top: distributed tracing, distributed system, distributed systems, logging
+
+[ 185] [SCORE:    5.11] [ crawler-mac] https://www.educative.io/courses/learn-data-analysis/meet-the-analysts-world
+       Source=0.70 Keywords=20 Age=180d Published=unknown Domain=educative.io
+       Top: bottleneck, google maps, slo, sla
+
+[ 186] [SCORE:    5.11] [ crawler-mac] https://www.educative.io/courses/java-multithreading-for-senior-engineering-interviews
+       Source=0.70 Keywords=20 Age=180d Published=unknown Domain=educative.io
+       Top: system design, latency, throughput, logging
+
+[ 187] [SCORE:    5.11] [ crawler-mac] https://www.educative.io/blog/php-tutorial-from-scratch
+       Source=0.70 Keywords=20 Age=180d Published=unknown Domain=educative.io
+       Top: shopping cart, system design, sla, docker
+
+[ 188] [SCORE:    5.08] [ crawler-mac] https://www.educative.io/courses/feature-engineering-for-machine-learning
+       Source=0.70 Keywords=19 Age=180d Published=unknown Domain=educative.io
+       Top: system design, scalability, rest api, sla
+
+[ 189] [SCORE:    5.01] [ crawler-mac] https://www.educative.io/blog/red-flags-when-interviewing-for-your-first-developer-role
+       Source=0.70 Keywords=17 Age=180d Published=unknown Domain=educative.io
+       Top: system design, mongodb, availability
+
+[ 190] [SCORE:    4.97] [ crawler-mac] https://www.educative.io/courses/vector-database/introduction-to-vector-databases-and-embeddings
+       Source=0.70 Keywords=16 Age=180d Published=unknown Domain=educative.io
+       Top: replication, database indexing, latency, throughput
+
+[ 191] [SCORE:    4.94] [ crawler-mac] https://www.educative.io/courses/grokking-the-product-architecture-interview/latency-and-throughput
+       Source=0.70 Keywords=47 Age=180d Published=unknown Domain=educative.io
+       Top: latency, throughput, bandwidth
+
+[ 192] [SCORE:    4.93] [ crawler-mac] https://www.educative.io/courses/introduction-microservice-principles-concepts/introduction-N7Y2ZzKNl1p
+       Source=0.70 Keywords=31 Age=180d Published=unknown Domain=educative.io
+       Top: microservices, e-commerce, system design, docker
+
+[ 193] [SCORE:    4.91] [ crawler-mac] https://www.educative.io/courses/generative-ai-system-design/wrapping-up-genai-system-design
+       Source=0.70 Keywords=21 Age=180d Published=unknown Domain=educative.io
+       Top: system design, design principles
+
+[ 194] [SCORE:    4.90] [ crawler-mac] https://www.educative.io/courses/master-pages-asp-net
+       Source=0.70 Keywords=14 Age=180d Published=unknown Domain=educative.io
+       Top: system design, autocomplete
+
+[ 195] [SCORE:    4.86] [ crawler-mac] https://www.educative.io/courses/system-design-deep-dive-real-world-distributed-systems/detailed-design-of-bigtable-part-ii
+       Source=0.70 Keywords=13 Age=180d Published=unknown Domain=educative.io
+       Top: load balancing, system design, distributed system, distributed systems
+
+[ 196] [SCORE:    4.86] [ crawler-mac] https://www.educative.io/courses/the-complete-java-crash-course/printing-to-the-screen
+       Source=0.70 Keywords=13 Age=180d Published=unknown Domain=educative.io
+       Top: sla, sli
+
+[ 197] [SCORE:    4.82] [ crawler-mac] https://www.educative.io/courses/deep-learning-pytorch-fundamentals/gradient-descent
+       Source=0.70 Keywords=12 Age=180d Published=unknown Domain=educative.io
+       Top: slo
+
+[ 198] [SCORE:    4.82] [ crawler-mac] https://www.educative.io/courses/learn-intermediate-java
+       Source=0.70 Keywords=12 Age=180d Published=unknown Domain=educative.io
+       Top: system design, logging
+
+[ 199] [SCORE:    4.82] [ crawler-mac] https://www.educative.io/courses/generative-ai-product-launch
+       Source=0.70 Keywords=12 Age=180d Published=unknown Domain=educative.io
+       Top: system design, sla
+
+[ 200] [SCORE:    4.82] [ crawler-mac] https://www.educative.io/courses/intro-data-science-machine-learning
+       Source=0.70 Keywords=12 Age=180d Published=unknown Domain=educative.io
+       Top: system design, monitoring
+
+[ 201] [SCORE:    4.80] [ crawler-mac] https://www.educative.io/courses/agentic-system-design-crash-course/trust-reliability-and-production-design
        Source=0.70 Keywords=25 Age=180d Published=unknown Domain=educative.io
-       Top: rest api, system design, sli, trade-off
+       Top: fault tolerance, scalability, latency, system design, observability
 
-[ 138] [SCORE:    5.04] [ crawler-mac] https://research.google/people/106265
-       Source=0.80 Keywords=10 Age=180d Published=unknown Domain=research.google
-       Top: sla, redis
+[ 202] [SCORE:    4.78] [ crawler-mac] https://www.educative.io/courses/machine-learning-system-design/candidate-generation-and-ranking-model
+       Source=0.70 Keywords=11 Age=180d Published=unknown Domain=educative.io
+       Top: latency, system design
+
+[ 203] [SCORE:    4.76] [ crawler-mac] https://www.educative.io/courses/grokking-frontend-system-design-interview/the-structure-of-the-frontend-system-design-course
+       Source=0.70 Keywords=15 Age=180d Published=unknown Domain=educative.io
+       Top: system design, functional requirements
+
+[ 204] [SCORE:    4.73] [ crawler-mac] https://www.educative.io/courses/advanced-system-design-interview-prep-crash-course/two-phase-locking-2pl
+       Source=0.70 Keywords=18 Age=180d Published=unknown Domain=educative.io
+       Top: throughput, latency, system design, trade-off
+
+[ 205] [SCORE:    4.72] [ crawler-mac] https://www.educative.io/courses/introduction-microservice-principles-concepts/more-on-advantages
+       Source=0.70 Keywords=23 Age=180d Published=unknown Domain=educative.io
+       Top: microservices, scalability, availability
+
+[ 206] [SCORE:    4.70] [ crawler-mac] https://www.educative.io/courses/deep-learning-pytorch-fundamentals
+       Source=0.70 Keywords=9 Age=180d Published=unknown Domain=educative.io
+       Top: system design
+
+[ 207] [SCORE:    4.70] [ crawler-mac] https://www.educative.io/courses/learn-object-oriented-programming-in-cpp
+       Source=0.70 Keywords=9 Age=180d Published=unknown Domain=educative.io
+       Top: system design
+
+[ 208] [SCORE:    4.70] [ crawler-mac] https://www.educative.io/courses/initialize-data-members-cpp
+       Source=0.70 Keywords=9 Age=180d Published=unknown Domain=educative.io
+       Top: system design
+
+[ 209] [SCORE:    4.70] [ crawler-mac] https://www.educative.io/courses/generative-ai-system-design/preliminary-machine-learning-concepts
+       Source=0.70 Keywords=9 Age=180d Published=unknown Domain=educative.io
+       Top: system design
+
+[ 210] [SCORE:    4.70] [ crawler-mac] https://www.educative.io/courses/data-structures-interviews-cs
+       Source=0.70 Keywords=9 Age=180d Published=unknown Domain=educative.io
+       Top: system design
+
+[ 211] [SCORE:    4.70] [ crawler-mac] https://www.educative.io/courses/complete-guide-to-java-programming/high-level-to-machine-language
+       Source=0.70 Keywords=9 Age=180d Published=unknown Domain=educative.io
+       Top: sla
+
+[ 212] [SCORE:    4.70] [ crawler-mac] https://www.educative.io/courses/modern-cpp-concurrency-in-practice-get-the-most-out-of-any-machine
+       Source=0.70 Keywords=9 Age=180d Published=unknown Domain=educative.io
+       Top: system design
+
+[ 213] [SCORE:    4.62] [ crawler-mac] https://www.educative.io/courses/developing-microservices-with-quarkus/conclusion
+       Source=0.70 Keywords=25 Age=180d Published=unknown Domain=educative.io
+       Top: redis, graphql, websocket, fault tolerance, microservices
+
+[ 214] [SCORE:    4.49] [ crawler-mac] https://www.educative.io/courses/grokking-frontend-system-design-interview/video-streaming-platform-frontend-system-design/mock-interview
+       Source=0.70 Keywords=11 Age=180d Published=unknown Domain=educative.io
+       Top: system design, video streaming
+
+[ 215] [SCORE:    4.44] [ crawler-mac] https://engineering.fb.com/2020/03/18/production-engineering/ntp-service
+       Source=0.85 Keywords=31 Age=2258d Published=2020-03-18T12:00:39+00:00 Domain=engineering.fb.com
+       Top: sla, slo, sli, latency, throughput
+
+[ 216] [SCORE:    4.44] [ crawler-mac] https://www.educative.io/courses/build-microservices-web-apps-with-rabbitmq-react-tsx-and-django/build-a-task-manager-microservice-web-app-with-flask-and-sqlite/project
+       Source=0.70 Keywords=13 Age=180d Published=unknown Domain=educative.io
+       Top: rabbitmq, microservices, docker, monitoring
+
+[ 217] [SCORE:    4.43] [ crawler-mac] https://www.educative.io/courses/system-design-interview-doordash/creating-the-component-design-architecture-of-the-system
+       Source=0.70 Keywords=20 Age=180d Published=unknown Domain=educative.io
+       Top: kafka, payment gateway, rabbitmq, system design, microservices
+
+[ 218] [SCORE:    4.25] [ crawler-mac] https://www.educative.io/courses/agentic-system-design-crash-course/final-thoughts
+       Source=0.70 Keywords=18 Age=180d Published=unknown Domain=educative.io
+       Top: system design, design principles
+
+[ 219] [SCORE:    4.22] [ crawler-mac] https://engineering.fb.com/2021/08/11/open-source/time-appliance
+       Source=0.85 Keywords=19 Age=1747d Published=2021-08-11T11:00:34+00:00 Domain=engineering.fb.com
+       Top: monitoring, trade-off, slo
 
 ====================================================================================================
 # SUMMARY
-# Total Links:  138
-# Highest:      6.50
-# Lowest:       5.04
-# Average:      6.38
+# Total Links:  219
+# Highest:      7.54
+# Lowest:       4.22
+# Average:      6.37
 #
 # DOMAINS:
-#   docs.aws.amazon.com: 126 links
-#   cloud.google.com: 6 links
-#   educative.io: 3 links
-#   status.cloud.google.com: 1 links
-#   docs.cloud.google.com: 1 links
-#   research.google: 1 links
+#   educative.io: 119 links
+#   designgurus.io: 75 links
+#   research.google: 14 links
+#   engineering.linkedin.com: 4 links
+#   engineering.fb.com: 3 links
+#   martinfowler.com: 2 links
+#   highscalability.com: 1 links
+#   bytebytego.com: 1 links

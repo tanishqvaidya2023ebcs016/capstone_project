@@ -3,7 +3,7 @@ Ranked Crawler — Enhanced Algorithm (Complete Version)
 ========================================================
 Includes all URL filtering, file writer, and seed functions.
 """
- 
+
 import sys
 import os
 import time
@@ -16,13 +16,13 @@ from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse, parse_qs
 from collections import defaultdict, deque
 from concurrent.futures import ThreadPoolExecutor, as_completed
- 
+
 import grpc
 import requests
 from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
- 
+
 # Optional better date parsing
 try:
     import dateparser
@@ -30,17 +30,17 @@ try:
 except ImportError:
     HAS_DATEPARSER = False
     dateparser = None
- 
+
 # Add generated protobuf path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'generated'))
 import crawler_pb2
 import crawler_pb2_grpc
- 
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(name)s] %(levelname)s: %(message)s'
 )
- 
+
 # ============================================================
 # SCORING WEIGHTS & PARAMETERS
 # ============================================================
@@ -54,10 +54,10 @@ MIN_CONTENT_LENGTH = 500
 OPTIMAL_CONTENT_LENGTH = 5000
 CONTENT_LENGTH_BONUS_MAX = 0.5
 CONTENT_LENGTH_PENALTY_MAX = -0.5
- 
+
 # Minimum keyword hits a page must have to be stored (even tier1 pages)
 MIN_KEYWORD_COUNT = 3
- 
+
 # ============================================================
 # SOURCE AUTHORITY
 # ============================================================
@@ -84,7 +84,7 @@ SOURCE_AUTHORITY = {
     'freecodecamp.org': 0.55, 'wikipedia.org': 0.50,
     'en.wikipedia.org': 0.50,
 }
- 
+
 GITHUB_REPO_AUTHORITY = {
     'donnemartin/system-design-primer': 1.0,
     'karanpratapsingh/system-design': 0.95,
@@ -102,7 +102,7 @@ GITHUB_REPO_AUTHORITY = {
     'lei-hsia/grokking-system-design': 0.75,
     'InterviewReady/system-design-resources': 0.80,
 }
- 
+
 # ============================================================
 # WEIGHTED KEYWORDS
 # ============================================================
@@ -167,7 +167,7 @@ KEYWORD_WEIGHTS = {
     'design principles': 3, 'single responsibility': 2,
     'separation of concerns': 2,
 }
- 
+
 # ============================================================
 # URL FILTERING CONSTANTS
 # ============================================================
@@ -176,91 +176,46 @@ TIER2_DOMAINS = set(k for k, v in SOURCE_AUTHORITY.items() if 0.60 <= v < 0.90)
 TIER3_DOMAINS = set(k for k, v in SOURCE_AUTHORITY.items() if v < 0.60)
 ALLOWED_DOMAINS = set(SOURCE_AUTHORITY.keys())
 GITHUB_QUALITY_REPOS = list(GITHUB_REPO_AUTHORITY.keys())
- 
-# ============================================================
-# FIX 1: Greatly expanded blocked patterns
-# Previously missing: /faq, /aboutus, /premium, /our-coaches,
-# /community/, /mock/, /become-an-expert, /practice, /gift
-# ============================================================
+
 BLOCKED_PATTERNS = [
-    # Auth / account
     r'/login', r'/signin', r'/signup', r'/register', r'/auth/', r'/oauth',
     r'/sso/', r'/password', r'/forgot', r'/reset-password', r'/account',
     r'/settings', r'/profile', r'/preferences', r'/notifications',
-    # GitHub noise
     r'/pulls$', r'/issues$', r'/issues\?', r'/commit/', r'/commits/',
     r'/compare/', r'/blame/', r'/raw/', r'/edit/', r'/delete/', r'/fork',
     r'/forks$', r'/stargazers', r'/watchers', r'/network', r'/graphs/',
     r'/pulse', r'/projects', r'/actions', r'/security', r'/packages',
     r'/releases/tag/', r'/archive/', r'/workflows/', r'\.git$', r'/sponsors',
     r'/marketplace', r'/codespaces', r'/copilot', r'/share\?',
-    # Social sharing
     r'intent/tweet', r'facebook\.com/sharer', r'linkedin\.com/share',
-    # Commerce / marketing
     r'/pricing', r'/plans', r'/subscribe', r'/cart', r'/checkout', r'/buy',
     r'/premium', r'/gift', r'/gift-credits', r'/mock/gift',
-    # Legal / static pages
     r'/terms', r'/privacy', r'/cookie', r'/legal', r'/contact', r'/support',
-    # About / company pages  (FIX: was only /about$, missed /aboutus /about-us)
     r'/about', r'/careers', r'/jobs', r'/our-coaches', r'/coaches',
     r'/become-an-expert', r'/become-a-coach', r'/team', r'/press',
-    # FAQ / help
     r'/faq', r'/help', r'/docs$', r'/changelog',
-    # Navigation / listing junk
     r'/blog/tag/', r'/blog/page/', r'/category/', r'/tags/',
-    # Community / social feed pages (not content)
     r'/community/', r'/questions\?', r'/questions$', r'/forum',
     r'/discuss', r'/answers',
-    # Mock scheduling / booking UI
     r'/mock/', r'/schedule',
-    # Practice landing / overview (no real content)
     r'/practice$', r'/practice/overview$',
-    # Behavior / code listing pages (not system design content)
     r'/behavioral$', r'/code$',
-    # Media / binary files
     r'\.(png|jpg|jpeg|gif|svg|ico|webp|mp4|mp3|pdf|zip|tar|gz)$',
-    # API / feeds
     r'/api/', r'/rss', r'/feed', r'/sitemap', r'\.json$', r'\.xml$',
-    # Tracking params
     r'utm_', r'ref=', r'/ads/', r'/sponsor',
-    # Pagination noise
     r'/page/\d+', r'\?page=', r'\?p=\d+',
 ]
 BLOCKED_COMPILED = [re.compile(p, re.IGNORECASE) for p in BLOCKED_PATTERNS]
- 
-# ============================================================
-# FIX 2: Per-domain path allowlists
-# Only crawl URLs whose path STARTS WITH one of these prefixes.
-# Prevents crawling /faq, /premium, /community, etc. even if
-# the domain is Tier1 and would otherwise pass all checks.
-# ============================================================
+
 DOMAIN_PATH_ALLOWLIST = {
-    'hellointerview.com': [
-        '/learn/',          # all learning content
-        '/blog/',           # engineering blog posts
-    ],
-    'www.hellointerview.com': [
-        '/learn/',
-        '/blog/',
-    ],
-    'bytebytego.com': [
-        '/courses/',
-        '/guides/',
-        '/blog/',
-    ],
-    'blog.bytebytego.com': ['/'],  # entire blog is fine
-    'designgurus.io': [
-        '/course/',
-        '/blog/',
-        '/learn/',
-    ],
-    'educative.io': [
-        '/courses/',
-        '/blog/',
-        '/answers/',        # educative Q&A has good content
-    ],
+    'hellointerview.com': ['/learn/', '/blog/'],
+    'www.hellointerview.com': ['/learn/', '/blog/'],
+    'bytebytego.com': ['/courses/', '/guides/', '/blog/'],
+    'blog.bytebytego.com': ['/'],
+    'designgurus.io': ['/course/', '/blog/', '/learn/'],
+    'educative.io': ['/courses/', '/blog/', '/answers/'],
 }
- 
+
 SD_URL_KEYWORDS = [
     'system-design', 'system_design', 'systemdesign', 'distributed-system',
     'distributed_system', 'microservices', 'architecture', 'software-architecture',
@@ -275,7 +230,7 @@ SD_URL_KEYWORDS = [
     'ml-system-design', 'vector-database', 'deep-dive',
     'problem-breakdown', 'core-concept', 'key-technolog',
 ]
- 
+
 # ============================================================
 # URL HELPER FUNCTIONS
 # ============================================================
@@ -284,47 +239,40 @@ def get_domain(url):
         return urlparse(url).netloc.lower()
     except:
         return ""
- 
+
 def get_domain_stripped(url):
-    """Domain without www. prefix for authority lookups."""
     return get_domain(url).lstrip('www.')
- 
+
 def is_blocked(url):
     for p in BLOCKED_COMPILED:
         if p.search(url):
             return True
     return False
- 
+
 def is_allowed(url):
     domain = get_domain_stripped(url)
     return any(a in domain for a in ALLOWED_DOMAINS)
- 
+
 def is_tier1(url):
     domain = get_domain_stripped(url)
     return any(t in domain for t in TIER1_DOMAINS)
- 
+
 def has_sd_keyword(url):
     url_lower = url.lower()
     return any(kw in url_lower for kw in SD_URL_KEYWORDS)
- 
+
 def passes_domain_path_allowlist(url):
-    """
-    FIX 2: If the domain has a path allowlist, the URL's path must
-    start with at least one of the allowed prefixes.
-    Returns True if no allowlist exists for this domain (unrestricted).
-    """
-    domain = get_domain(url)  # keep www for dict lookup
-    # Try both with and without www
+    domain = get_domain(url)
     allowed_paths = DOMAIN_PATH_ALLOWLIST.get(domain) or \
                     DOMAIN_PATH_ALLOWLIST.get(domain.lstrip('www.'))
     if allowed_paths is None:
-        return True  # no restriction for this domain
+        return True
     try:
         path = urlparse(url).path
         return any(path.startswith(prefix) for prefix in allowed_paths)
     except:
         return False
- 
+
 def is_quality_github(url):
     parsed = urlparse(url)
     if 'github.com' not in parsed.netloc:
@@ -349,57 +297,46 @@ def is_quality_github(url):
     if any(kw in url_lower for kw in sd_kw) and len(parts) == 2:
         return True
     return False
- 
+
 def is_quality_url(url):
-    """
-    Returns (True, reason) if the URL should be crawled.
- 
-    Gate order:
-    1. Valid scheme
-    2. Not in blocked patterns
-    3. Domain must be in our allowlist
-    4. Must pass per-domain path allowlist (FIX 2)
-    5. Domain-specific checks (GitHub, Medium, tier3 edu sites)
-    """
     try:
         parsed = urlparse(url)
         if parsed.scheme not in ('http', 'https') or not parsed.netloc:
             return False, "invalid"
     except:
         return False, "invalid"
- 
+
     if is_blocked(url):
         return False, "blocked"
- 
+
     if not is_allowed(url):
         return False, "domain not allowed"
- 
-    # FIX 2: enforce per-domain path allowlist BEFORE tier checks
+
     if not passes_domain_path_allowlist(url):
         return False, "path not in allowlist"
- 
+
     domain = get_domain_stripped(url)
- 
+
     if 'github.com' in domain:
         return (True, "quality github") if is_quality_github(url) else (False, "junk github")
- 
+
     if 'medium.com' in domain:
         return (True, "quality medium") if has_sd_keyword(url) else (False, "non-sd medium")
- 
+
     if any(t in domain for t in TIER3_DOMAINS):
         return (True, "quality edu") if has_sd_keyword(url) else (False, "non-sd edu")
- 
+
     if any(t in domain for t in TIER2_DOMAINS):
         return True, "tier2"
- 
+
     if is_tier1(url):
         return True, "tier1"
- 
+
     if has_sd_keyword(url):
         return True, "has keyword"
- 
+
     return False, "no relevance"
- 
+
 def clean_url(url):
     try:
         parsed = urlparse(url)
@@ -418,14 +355,53 @@ def clean_url(url):
         return url.rstrip('/')
     except:
         return url
- 
+
+# ============================================================
+# PER-DOMAIN RATE LIMITER
+# Replaces the old global time.sleep(1.0) inside crawl_url.
+#
+# Why this is better:
+#   - Old approach: every worker sleeps 1s after EVERY page,
+#     regardless of domain. 3 workers = max ~180 URLs/hour total.
+#   - New approach: each domain gets its own 0.5s cooldown.
+#     Workers crawling DIFFERENT domains run fully in parallel
+#     with zero sleep. Only workers hitting the SAME domain
+#     throttle against each other. Result: N domains in flight
+#     simultaneously, each politely paced.
+# ============================================================
+class DomainRateLimiter:
+    """Thread-safe per-domain rate limiter using token bucket approach."""
+
+    def __init__(self, delay_seconds: float = 0.5):
+        self._delay   = delay_seconds
+        self._last    = {}   # domain -> last-request timestamp
+        self._locks   = defaultdict(threading.Lock)
+        self._meta    = threading.Lock()
+
+    def _get_lock(self, domain: str) -> threading.Lock:
+        with self._meta:
+            return self._locks[domain]
+
+    def wait(self, url: str):
+        """Block if needed to honour per-domain rate limit, then mark access."""
+        domain = get_domain(url)
+        lock   = self._get_lock(domain)
+        with lock:
+            now  = time.monotonic()
+            last = self._last.get(domain, 0.0)
+            gap  = now - last
+            if gap < self._delay:
+                time.sleep(self._delay - gap)
+            self._last[domain] = time.monotonic()
+
+
 # ============================================================
 # ENHANCED SCORING ENGINE
 # ============================================================
 class ScoringEngine:
     def __init__(self):
         self.logger = logging.getLogger('ScoringEngine')
- 
+
     def get_source_authority(self, url: str) -> float:
         domain = get_domain_stripped(url)
         if 'github.com' in domain:
@@ -440,7 +416,7 @@ class ScoringEngine:
             if auth_domain in domain:
                 return score
         return 0.3
- 
+
     def calculate_relevance(self, html: str) -> tuple:
         try:
             soup = BeautifulSoup(html, 'html.parser')
@@ -449,7 +425,7 @@ class ScoringEngine:
                 tag.decompose()
             text = soup.get_text(separator=' ').lower()
             text = re.sub(r'\s+', ' ', text)
- 
+
             total_weight = 0
             found = []
             keyword_count = 0
@@ -459,17 +435,17 @@ class ScoringEngine:
                     total_weight += weight * count
                     keyword_count += count
                     found.append((kw, count, weight))
- 
+
             normalized = 1 - math.exp(-RELEVANCE_ALPHA * total_weight)
             return total_weight, normalized, found, keyword_count
         except Exception as e:
             self.logger.error(f"Keyword analysis error: {e}")
             return 0, 0.0, [], 0
- 
+
     def extract_publish_date(self, html: str, url: str) -> datetime:
         soup = BeautifulSoup(html, 'html.parser')
         date_str = None
- 
+
         for name in ['article:published_time', 'datePublished', 'date',
                      'publish_date', 'pubdate', 'og:article:published_time']:
             tag = soup.find('meta', attrs={'property': name}) or \
@@ -477,12 +453,12 @@ class ScoringEngine:
             if tag and tag.get('content'):
                 date_str = tag['content']
                 break
- 
+
         if not date_str:
             time_tag = soup.find('time', attrs={'datetime': True})
             if time_tag:
                 date_str = time_tag['datetime']
- 
+
         if not date_str:
             for script in soup.find_all('script', type='application/ld+json'):
                 try:
@@ -495,12 +471,12 @@ class ScoringEngine:
                                 break
                 except:
                     pass
- 
+
         if not date_str:
             match = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', url)
             if match:
                 date_str = f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
- 
+
         if date_str:
             for fmt in ['%Y-%m-%dT%H:%M:%S%z', '%Y-%m-%dT%H:%M:%SZ',
                         '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']:
@@ -518,7 +494,7 @@ class ScoringEngine:
                         dt = dt.replace(tzinfo=timezone.utc)
                     return dt
         return None
- 
+
     def freshness_factor(self, publish_date: datetime) -> float:
         if publish_date is None:
             days = 180
@@ -528,7 +504,7 @@ class ScoringEngine:
                 publish_date = publish_date.replace(tzinfo=timezone.utc)
             days = max(0, (now - publish_date).days)
         return math.exp(-LAMBDA * days)
- 
+
     def content_length_bonus(self, html: str) -> float:
         try:
             soup = BeautifulSoup(html, 'html.parser')
@@ -543,28 +519,24 @@ class ScoringEngine:
                 return CONTENT_LENGTH_PENALTY_MAX + ratio * (CONTENT_LENGTH_BONUS_MAX - CONTENT_LENGTH_PENALTY_MAX)
         except:
             return 0.0
- 
+
     def calculate_score(self, url: str, html: str) -> dict:
         sauth = self.get_source_authority(url)
         raw_rel, norm_rel, found_keywords, kw_hit_count = self.calculate_relevance(html)
         pub_date = self.extract_publish_date(html, url)
         fresh = self.freshness_factor(pub_date)
         len_bonus = self.content_length_bonus(html)
- 
-        source_score = WEIGHT_SOURCE * sauth
+
+        source_score    = WEIGHT_SOURCE    * sauth
         relevance_score = WEIGHT_RELEVANCE * norm_rel
         freshness_score = WEIGHT_FRESHNESS * fresh
-        final_score = source_score + relevance_score + freshness_score + len_bonus
-        final_score = max(0.0, round(final_score, 2))
- 
-        if pub_date:
-            days_old = (datetime.now(timezone.utc) - pub_date).days
-        else:
-            days_old = 180
- 
+        final_score     = source_score + relevance_score + freshness_score + len_bonus
+        final_score     = max(0.0, round(final_score, 2))
+
+        days_old = (datetime.now(timezone.utc) - pub_date).days if pub_date else 180
+
         result = {
-            'url': url,
-            'score': final_score,
+            'url': url, 'score': final_score,
             'source_authority': sauth,
             'source_score': round(source_score, 2),
             'raw_relevance': raw_rel,
@@ -576,25 +548,30 @@ class ScoringEngine:
             'length_bonus': round(len_bonus, 2),
             'days_old': days_old,
             'publish_date': pub_date.isoformat() if pub_date else 'unknown',
-            'top_keywords': [kw for kw, cnt, w in sorted(found_keywords, key=lambda x: -x[2]*x[1])[:10]],
+            'top_keywords': [kw for kw, cnt, w in
+                             sorted(found_keywords, key=lambda x: -x[2]*x[1])[:10]],
             'domain': get_domain_stripped(url),
         }
-        self.logger.info(f"📊 Score={final_score:.2f} | Src={source_score:.2f} "
-                         f"Rel={relevance_score:.2f} Fresh={freshness_score:.2f} "
-                         f"Len={len_bonus:+.2f} KwHits={kw_hit_count} | {url}")
+        self.logger.info(
+            f"Score={final_score:.2f} | Src={source_score:.2f} "
+            f"Rel={relevance_score:.2f} Fresh={freshness_score:.2f} "
+            f"Len={len_bonus:+.2f} KwHits={kw_hit_count} | {url}"
+        )
         return result
- 
+
+
 # ============================================================
 # RANKED FILE WRITER
 # ============================================================
 class RankedFileWriter:
     def __init__(self, output_file: str):
-        self.output_file = output_file
+        self.output_file  = output_file
         self.scored_links = []
-        self.logger = logging.getLogger('RankedWriter')
+        self._lock        = threading.Lock()   # protect list from concurrent writers
+        self.logger       = logging.getLogger('RankedWriter')
         os.makedirs(os.path.dirname(output_file) or '.', exist_ok=True)
         self._load_existing()
- 
+
     def _load_existing(self):
         if not os.path.exists(self.output_file):
             return
@@ -605,51 +582,49 @@ class RankedFileWriter:
                     if not line or line.startswith('#') or line.startswith('='):
                         continue
                     match = re.match(
-                        r'\[(\d+)\]\s+\[SCORE:\s*([\d.]+)\]\s+\[(\S+)\]\s+(\S+)',
-                        line
-                    )
+                        r'\[(\d+)\]\s+\[SCORE:\s*([\d.]+)\]\s+\[(\S+)\]\s+(\S+)', line)
                     if match:
                         rank, score, crawler_id, url = match.groups()
                         self.scored_links.append({
-                            'url': url,
-                            'score': float(score),
+                            'url': url, 'score': float(score),
                             'crawler_id': crawler_id,
                         })
         except Exception as e:
             self.logger.error(f"Error loading existing file: {e}")
- 
+
     def add_link(self, score_data: dict, crawler_id: str):
         entry = {
-            'url': score_data['url'],
-            'score': score_data['score'],
+            'url':             score_data['url'],
+            'score':           score_data['score'],
             'source_authority': score_data['source_authority'],
-            'keyword_count': score_data.get('raw_relevance', 0),
-            'time_age_days': score_data['days_old'],
-            'publish_date': score_data['publish_date'],
-            'top_keywords': score_data.get('top_keywords', []),
-            'domain': score_data['domain'],
-            'crawler_id': crawler_id,
-            'crawled_at': datetime.now().isoformat(),
+            'keyword_count':   score_data.get('raw_relevance', 0),
+            'time_age_days':   score_data['days_old'],
+            'publish_date':    score_data['publish_date'],
+            'top_keywords':    score_data.get('top_keywords', []),
+            'domain':          score_data['domain'],
+            'crawler_id':      crawler_id,
+            'crawled_at':      datetime.now().isoformat(),
         }
-        for existing in self.scored_links:
-            if existing['url'] == entry['url']:
-                if entry['score'] > existing['score']:
-                    existing.update(entry)
-                self._write_file()
-                return
-        self.scored_links.append(entry)
-        self._write_file()
- 
+        with self._lock:
+            for existing in self.scored_links:
+                if existing['url'] == entry['url']:
+                    if entry['score'] > existing['score']:
+                        existing.update(entry)
+                    self._write_file()
+                    return
+            self.scored_links.append(entry)
+            self._write_file()
+
     def _write_file(self):
+        # Called inside self._lock
         self.scored_links.sort(key=lambda x: x['score'], reverse=True)
         try:
             with open(self.output_file, 'w', encoding='utf-8') as f:
-                f.write(f"# 🏆 RANKED SYSTEM DESIGN LINKS\n")
-                f.write(f"# Score = ({WEIGHT_SOURCE}×Source) + ({WEIGHT_RELEVANCE}×Keywords) - (0.02×DaysOld)\n")
+                f.write(f"# RANKED SYSTEM DESIGN LINKS\n")
+                f.write(f"# Score = ({WEIGHT_SOURCE}xSource) + ({WEIGHT_RELEVANCE}xKeywords) - (0.02xDaysOld)\n")
                 f.write(f"# Last Updated: {datetime.now().isoformat()}\n")
                 f.write(f"# Total Links: {len(self.scored_links)}\n")
                 f.write(f"{'=' * 100}\n\n")
- 
                 for rank, entry in enumerate(self.scored_links, 1):
                     f.write(
                         f"[{rank:>4d}] "
@@ -669,7 +644,6 @@ class RankedFileWriter:
                     if keywords_str:
                         f.write(f"       Top: {keywords_str}\n")
                     f.write(f"\n")
- 
                 f.write(f"{'=' * 100}\n")
                 f.write(f"# SUMMARY\n")
                 if self.scored_links:
@@ -685,39 +659,88 @@ class RankedFileWriter:
                     f.write(f"#\n# DOMAINS:\n")
                     for d, count in sorted(domains.items(), key=lambda x: -x[1]):
                         f.write(f"#   {d}: {count} links\n")
- 
-            self.logger.info(f"📝 File updated: {len(self.scored_links)} links, "
-                             f"top score: {self.scored_links[0]['score']:.2f}")
         except Exception as e:
             self.logger.error(f"Error writing file: {e}")
- 
+
+
 # ============================================================
-# CRAWLER WITH CONCURRENCY & RETRIES
+# CRAWLER WITH FULL CPU UTILIZATION
 # ============================================================
 class RankedCrawler:
-    def __init__(self, crawler_id, queue_server, file_server, max_workers=3):
+    # ── Worker count strategy ──────────────────────────────────────────
+    # Crawling is I/O-bound (network + HTML parsing). The GIL barely
+    # matters here; threads spend nearly all their time waiting on
+    # network I/O. Setting workers = cpu_count * 8 keeps every CPU
+    # busy scheduling threads and parsing HTML even when many workers
+    # are blocked on network.  The env var CRAWLER_WORKERS overrides
+    # this so you can tune per machine:
+    #   Mac (8-core M1):   default → 64 workers
+    #   Windows (4-core):  default → 32 workers
+    #   Oracle (16-core):  default → 128 workers
+    # ──────────────────────────────────────────────────────────────────
+    DEFAULT_WORKERS_PER_CPU = 8
+
+    def __init__(self, crawler_id, queue_server, file_server, max_workers=None):
         self.crawler_id = crawler_id
-        self.logger = logging.getLogger(crawler_id)
-        self.scoring = ScoringEngine()
-        self.ranked_writer = RankedFileWriter('./output/links.txt')
+        self.logger     = logging.getLogger(crawler_id)
+
+        # Auto-scale if not explicitly set
+        if max_workers is None:
+            cpu_count   = os.cpu_count() or 4
+            max_workers = cpu_count * self.DEFAULT_WORKERS_PER_CPU
+            self.logger.info(
+                f"Auto-scaled workers: {cpu_count} CPUs x {self.DEFAULT_WORKERS_PER_CPU}"
+                f" = {max_workers} workers"
+            )
+
         self.max_workers = max_workers
+        self.logger.info(f"Worker pool size: {self.max_workers}")
+
+        self.scoring       = ScoringEngine()
+        self.ranked_writer = RankedFileWriter('./output/links.txt')
+        self.rate_limiter  = DomainRateLimiter(delay_seconds=0.5)
+
+        # Thread-safe visited set
+        self._visited_lock     = threading.Lock()
         self.visited_in_session = set()
- 
+
+        # Build a connection-pooled session with enough connections to
+        # saturate all workers without exhausting file descriptors.
+        pool_size = max_workers + 10
         self.session = requests.Session()
-        retries = Retry(total=2, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
-        self.session.mount('http://', HTTPAdapter(max_retries=retries))
-        self.session.mount('https://', HTTPAdapter(max_retries=retries))
+        retries = Retry(total=2, backoff_factor=0.5, status_forcelist=[500, 502, 503, 504])
+        adapter = HTTPAdapter(
+            max_retries=retries,
+            pool_connections=pool_size,
+            pool_maxsize=pool_size,
+        )
+        self.session.mount('http://',  adapter)
+        self.session.mount('https://', adapter)
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+            'User-Agent': (
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+                'AppleWebKit/537.36'
+            )
         })
- 
+
         self.queue_channel = grpc.insecure_channel(queue_server)
-        self.queue_stub = crawler_pb2_grpc.QueueServiceStub(self.queue_channel)
-        self.file_channel = grpc.insecure_channel(file_server)
-        self.file_stub = crawler_pb2_grpc.FileServiceStub(self.file_channel)
- 
-        self.stats = defaultdict(int)
- 
+        self.queue_stub    = crawler_pb2_grpc.QueueServiceStub(self.queue_channel)
+        self.file_channel  = grpc.insecure_channel(file_server)
+        self.file_stub     = crawler_pb2_grpc.FileServiceStub(self.file_channel)
+
+        self.stats      = defaultdict(int)
+        self._stats_lock = threading.Lock()
+
+    # ── visited helpers (thread-safe) ─────────────────────────────────
+    def _is_visited(self, url: str) -> bool:
+        with self._visited_lock:
+            return url in self.visited_in_session
+
+    def _set_visited(self, url: str):
+        with self._visited_lock:
+            self.visited_in_session.add(url)
+
+    # ── gRPC helpers ──────────────────────────────────────────────────
     def _get_next_url(self):
         try:
             resp = self.queue_stub.GetNextURL(
@@ -725,116 +748,112 @@ class RankedCrawler:
             return resp.url, resp.queue_empty
         except:
             return "", True
- 
+
     def _add_urls(self, urls):
         if not urls:
             return
-        new_urls = [u for u in urls if u not in self.visited_in_session]
+        with self._visited_lock:
+            new_urls = [u for u in urls if u not in self.visited_in_session]
         if not new_urls:
             return
         try:
             resp = self.queue_stub.AddURLs(
-                crawler_pb2.AddURLsRequest(urls=new_urls, crawler_id=self.crawler_id), timeout=10)
-            self.logger.info(f"➕ Added {resp.added_count} new URLs")
+                crawler_pb2.AddURLsRequest(
+                    urls=new_urls, crawler_id=self.crawler_id), timeout=10)
+            self.logger.info(f"Added {resp.added_count} new URLs")
         except Exception as e:
             self.logger.error(f"AddURLs error: {e}")
- 
+
     def _mark_visited(self, url):
-        self.visited_in_session.add(url)
+        self._set_visited(url)
         try:
             self.queue_stub.MarkVisited(
-                crawler_pb2.MarkVisitedRequest(url=url, crawler_id=self.crawler_id), timeout=10)
+                crawler_pb2.MarkVisitedRequest(
+                    url=url, crawler_id=self.crawler_id), timeout=10)
         except:
             pass
- 
+
+    # ── core crawl task (runs inside thread pool) ──────────────────────
     def crawl_url(self, url):
-        if url in self.visited_in_session:
+        if self._is_visited(url):
             return
-        self.logger.info(f"🔍 Crawling: {url}")
- 
+
         ok, reason = is_quality_url(url)
         if not ok:
-            self.logger.info(f"⛔ Skip ({reason}): {url}")
+            self.logger.info(f"Skip ({reason}): {url}")
             self._mark_visited(url)
-            self.stats['filtered_url'] += 1
+            with self._stats_lock:
+                self.stats['filtered_url'] += 1
             return
- 
+
+        # Per-domain polite delay — blocks only threads hitting the
+        # SAME domain; workers on other domains run unimpeded.
+        self.rate_limiter.wait(url)
+
         try:
             resp = self.session.get(url, timeout=15)
             resp.raise_for_status()
             ct = resp.headers.get('content-type', '')
             if 'text/html' not in ct:
                 self._mark_visited(url)
-                self.stats['filtered_url'] += 1
+                with self._stats_lock:
+                    self.stats['filtered_url'] += 1
                 return
- 
-            html = resp.text
+
+            html       = resp.text
             score_data = self.scoring.calculate_score(url, html)
- 
-            # --------------------------------------------------------
-            # FIX 3: Apply keyword gate to ALL pages, including Tier1.
-            # Previously, Tier1 domains (hellointerview, bytebytego…)
-            # bypassed the score check entirely, so /faq, /our-coaches,
-            # /premium etc. all got stored because they cleared the
-            # URL filter. Now we reject any page — regardless of domain
-            # tier — that has fewer than MIN_KEYWORD_COUNT keyword hits.
-            # --------------------------------------------------------
+
             kw_hits = score_data.get('kw_hit_count', 0)
             if kw_hits < MIN_KEYWORD_COUNT:
                 self.logger.info(
-                    f"⛔ Too few keywords ({kw_hits} < {MIN_KEYWORD_COUNT}): {url}"
-                )
+                    f"Too few keywords ({kw_hits} < {MIN_KEYWORD_COUNT}): {url}")
                 self._mark_visited(url)
-                self.stats['filtered_content'] += 1
+                with self._stats_lock:
+                    self.stats['filtered_content'] += 1
                 return
- 
-            # Secondary score gate for non-tier1 domains
+
             if score_data['score'] < 2.0 and not is_tier1(url):
-                self.logger.info(f"⛔ Low score ({score_data['score']:.2f}): {url}")
+                self.logger.info(
+                    f"Low score ({score_data['score']:.2f}): {url}")
                 self._mark_visited(url)
-                self.stats['filtered_content'] += 1
+                with self._stats_lock:
+                    self.stats['filtered_content'] += 1
                 return
- 
+
             self.ranked_writer.add_link(score_data, self.crawler_id)
             self._store_to_grpc(url, score_data['score'])
-            self.stats['stored'] += 1
-            self.stats['crawled'] += 1
- 
+            with self._stats_lock:
+                self.stats['stored']  += 1
+                self.stats['crawled'] += 1
+
             self._mark_visited(url)
- 
+
             links = self._extract_links(url, html)
             if links:
                 self._add_urls(links)
- 
-            time.sleep(1.0)
- 
+
         except Exception as e:
-            self.logger.error(f"❌ Error crawling {url}: {e}")
+            self.logger.error(f"Error crawling {url}: {e}")
             self._mark_visited(url)
-            self.stats['errors'] += 1
- 
+            with self._stats_lock:
+                self.stats['errors'] += 1
+
     def _extract_links(self, url, html):
-        """
-        Extract outbound links from a crawled page.
-        Strips nav/footer/sidebar/header before scanning anchors so we
-        don't pick up site-wide navigation links (FAQ, About, Premium…).
-        """
         links = []
         try:
             soup = BeautifulSoup(html, 'html.parser')
-            # Remove ALL navigation/chrome elements before scanning links
             for tag in soup.find_all(['nav', 'footer', 'aside', 'header',
                                        'menu', 'toolbar']):
                 tag.decompose()
-            # Also remove elements that are clearly navigation by role/class
-            for tag in soup.find_all(attrs={'role': ['navigation', 'banner',
-                                                      'contentinfo', 'complementary']}):
+            for tag in soup.find_all(
+                    attrs={'role': ['navigation', 'banner',
+                                    'contentinfo', 'complementary']}):
                 tag.decompose()
             for tag in soup.find_all(class_=re.compile(
                     r'(nav|navbar|sidebar|footer|header|menu|breadcrumb|'
                     r'related|social|share|ad-|advertisement)', re.I)):
                 tag.decompose()
- 
+
             for a in soup.find_all('a', href=True):
                 href = a['href']
                 if href.startswith(('#', 'javascript:', 'mailto:', 'tel:')):
@@ -846,84 +865,123 @@ class RankedCrawler:
         except:
             pass
         return list(set(links))
- 
+
     def _store_to_grpc(self, url, score):
         try:
             self.file_stub.StoreLink(
-                crawler_pb2.StoreLinkRequest(url=url, crawler_id=self.crawler_id,
-                                             timestamp=int(time.time())), timeout=10)
+                crawler_pb2.StoreLinkRequest(
+                    url=url, crawler_id=self.crawler_id,
+                    timestamp=int(time.time())), timeout=10)
         except:
             pass
- 
+
+    # ── run loop: keep the thread pool 100% saturated ─────────────────
+    #
+    # Old approach:
+    #   while crawled < max_urls:
+    #       fetch max_workers URLs from queue  →  submit to pool
+    #       if len(futures) >= max_workers*2:  →  wait for half to finish
+    #
+    # Problem: the "wait" stalls the producer, so workers sit idle
+    # between batches. With 3 workers and 1s sleep, this was the
+    # dominant bottleneck.
+    #
+    # New approach (producer-consumer with a bounded work queue):
+    #   Producer thread:  drains the gRPC queue → work_queue (maxsize=pool)
+    #   Consumer threads: ThreadPoolExecutor pulling from work_queue
+    #
+    # The pool is always full. The only idle time is genuine queue
+    # exhaustion (nothing left to crawl), not scheduling gaps.
+    # ──────────────────────────────────────────────────────────────────
     def run(self, max_urls=200):
-        self.logger.info(f"🚀 Enhanced Ranked Crawler ({self.crawler_id}) starting...")
-        crawled = 0
-        empty = 0
- 
-        with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-            futures = []
-            while crawled < max_urls:
-                batch_urls = []
-                for _ in range(self.max_workers):
-                    url, queue_empty = self._get_next_url()
-                    if queue_empty or not url:
-                        empty += 1
-                        if empty >= 10:
-                            break
-                        time.sleep(2)
-                        continue
-                    empty = 0
-                    if url not in self.visited_in_session:
-                        batch_urls.append(url)
- 
-                if not batch_urls:
-                    if empty >= 10:
-                        break
-                    continue
- 
-                for url in batch_urls:
-                    futures.append(executor.submit(self.crawl_url, url))
- 
-                if len(futures) >= self.max_workers * 2:
-                    done, futures = futures[:self.max_workers], futures[self.max_workers:]
-                    for f in done:
-                        f.result()
-                        crawled += 1
- 
-                if crawled % 10 == 0:
-                    self.print_stats()
- 
-            for f in futures:
-                f.result()
-                crawled += 1
- 
-        self.print_stats()
- 
-    def print_stats(self):
-        self.logger.info("=" * 60)
+        import queue as _queue
+
         self.logger.info(
-            f"Stats: Crawled={self.stats['crawled']} Stored={self.stats['stored']} "
-            f"Filtered(URL)={self.stats['filtered_url']} "
-            f"Filtered(Content)={self.stats['filtered_content']} "
-            f"Errors={self.stats['errors']}"
+            f"Crawler ({self.crawler_id}) starting with "
+            f"{self.max_workers} workers | max_urls={max_urls}"
         )
-        self.logger.info("=" * 60)
- 
+
+        work_queue  = _queue.Queue(maxsize=self.max_workers * 4)
+        crawled_cnt = [0]   # mutable int shared with producer
+        done_event  = threading.Event()
+
+        # ── producer: fills work_queue from gRPC queue ──────────────
+        def producer():
+            consecutive_empty = 0
+            while not done_event.is_set():
+                if crawled_cnt[0] >= max_urls:
+                    break
+                url, queue_empty = self._get_next_url()
+                if queue_empty or not url:
+                    consecutive_empty += 1
+                    if consecutive_empty >= 20:
+                        self.logger.info("Queue empty — producer stopping.")
+                        break
+                    time.sleep(0.5)
+                    continue
+                consecutive_empty = 0
+                if not self._is_visited(url):
+                    work_queue.put(url)   # blocks if pool backlog is full
+            # Signal consumers that no more URLs are coming
+            for _ in range(self.max_workers):
+                work_queue.put(None)
+
+        producer_thread = threading.Thread(target=producer, daemon=True,
+                                           name='URLProducer')
+        producer_thread.start()
+
+        # ── consumers: ThreadPoolExecutor pulling from work_queue ────
+        def consumer():
+            while True:
+                url = work_queue.get()
+                if url is None:
+                    # Poison pill — forward to other consumers, then exit
+                    work_queue.put(None)
+                    work_queue.task_done()
+                    break
+                try:
+                    self.crawl_url(url)
+                    with self._stats_lock:
+                        crawled_cnt[0] += 1
+                    if crawled_cnt[0] % 25 == 0:
+                        self.print_stats()
+                finally:
+                    work_queue.task_done()
+
+        with ThreadPoolExecutor(max_workers=self.max_workers,
+                                thread_name_prefix='Crawler') as pool:
+            futures = [pool.submit(consumer) for _ in range(self.max_workers)]
+            producer_thread.join()
+            done_event.set()
+            for f in as_completed(futures):
+                try:
+                    f.result()
+                except Exception as e:
+                    self.logger.error(f"Consumer exception: {e}")
+
+        self.print_stats()
+
+    def print_stats(self):
+        with self._stats_lock:
+            s = dict(self.stats)
+        self.logger.info(
+            f"Stats | Crawled={s.get('crawled',0)} Stored={s.get('stored',0)} "
+            f"Filtered(URL)={s.get('filtered_url',0)} "
+            f"Filtered(Content)={s.get('filtered_content',0)} "
+            f"Errors={s.get('errors',0)} | Workers={self.max_workers}"
+        )
+
     def close(self):
         self.queue_channel.close()
         self.file_channel.close()
         self.session.close()
 
+
 # ============================================================
 # METRICS REPORTER
-# Runs as a background daemon thread inside the crawler process.
-# Every 5 seconds it measures THIS machine's RTT to the queue
-# server and file server, then POSTs to Tanishq's dashboard at
-# /api/report-metrics so /monitor shows all 3 machines live.
-# Zero impact on crawling — completely independent thread.
 # ============================================================
 class MetricsReporter(threading.Thread):
-    INTERVAL = 5  # seconds between reports
+    INTERVAL = 5
 
     def __init__(self, crawler_id, dashboard_url, queue_stub, file_stub):
         super().__init__(daemon=True, name='MetricsReporter')
@@ -962,20 +1020,14 @@ class MetricsReporter(threading.Thread):
         }
 
     def run(self):
-        self.logger.info(f"📡 Metrics reporter started → {self.dashboard_url}")
+        self.logger.info(f"Metrics reporter started -> {self.dashboard_url}")
         while self._running:
-            q_rtt = self._probe(
-                self.queue_stub.GetStats,
-                crawler_pb2.GetStatsRequest()
-            )
+            q_rtt = self._probe(self.queue_stub.GetStats,
+                                crawler_pb2.GetStatsRequest())
             f_rtt = self._probe(
                 self.file_stub.StoreLink,
                 crawler_pb2.StoreLinkRequest(
-                    url='__rtt_probe__',
-                    crawler_id=self.crawler_id,
-                    timestamp=0
-                )
-            )
+                    url='__rtt_probe__', crawler_id=self.crawler_id, timestamp=0))
             self.q_rtts.append(q_rtt)
             self.f_rtts.append(f_rtt)
             payload = {
@@ -988,13 +1040,10 @@ class MetricsReporter(threading.Thread):
             try:
                 self._http.post(
                     f"{self.dashboard_url}/api/report-metrics",
-                    json=payload, timeout=5
-                )
+                    json=payload, timeout=5)
             except Exception:
-                pass  # dashboard unreachable — keep crawling regardless
-            self.logger.info(
-                f"Q={q_rtt:>7.1f}ms  F={f_rtt:>7.1f}ms"
-            )
+                pass
+            self.logger.info(f"Q={q_rtt:>7.1f}ms  F={f_rtt:>7.1f}ms")
             time.sleep(self.INTERVAL)
 
     def stop(self):
@@ -1006,9 +1055,7 @@ class MetricsReporter(threading.Thread):
 # ============================================================
 def seed_urls(queue_stub):
     seeds = [
-        # ByteByteGo
         "https://bytebytego.com/courses/system-design-interview/scale-from-zero-to-millions-of-users",
-        # Hello Interview — learning paths only
         "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
         "https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts",
         "https://www.hellointerview.com/learn/system-design/in-a-hurry/key-technologies",
@@ -1018,7 +1065,6 @@ def seed_urls(queue_stub):
         "https://www.hellointerview.com/learn/ml-system-design/in-a-hurry/introduction",
         "https://www.hellointerview.com/learn/low-level-design/in-a-hurry/introduction",
         "https://www.hellointerview.com/blog/staff-level-system-design",
-        # Other top-tier
         "https://highscalability.com",
         "https://martinfowler.com/articles/patterns-of-distributed-systems",
         "https://architecturenotes.co",
@@ -1027,43 +1073,42 @@ def seed_urls(queue_stub):
         "https://github.com/ByteByteGoHq/system-design-101",
         "https://github.com/ashishps1/awesome-system-design-resources",
         "https://github.com/binhnguyennus/awesome-scalability",
-        # Engineering blogs
         "https://netflixtechblog.com",
         "https://eng.uber.com",
         "https://engineering.fb.com",
         "https://slack.engineering",
         "https://dropbox.tech",
         "https://airbnb.io",
-        # Courses
         "https://www.designgurus.io/course/grokking-the-system-design-interview",
         "https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers",
     ]
     try:
         resp = queue_stub.SeedURLs(
-            crawler_pb2.SeedURLsRequest(urls=seeds), timeout=10
-        )
-        logging.info(f"🌱 Seeded {resp.seeded_count} URLs")
+            crawler_pb2.SeedURLsRequest(urls=seeds), timeout=10)
+        logging.info(f"Seeded {resp.seeded_count} URLs")
     except grpc.RpcError as e:
         logging.error(f"Seed error: {e}")
- 
+
+
 # ============================================================
 # MAIN
 # ============================================================
 def main():
-    queue_server  = os.environ.get('QUEUE_SERVER',    'localhost:50051')
-    file_server   = os.environ.get('FILE_SERVER',     'localhost:50052')
-    crawler_id    = os.environ.get('CRAWLER_ID',      'crawler-1')
-    max_urls      = int(os.environ.get('MAX_URLS',    '200'))
-    should_seed   = os.environ.get('SEED_URLS',       'false').lower() == 'true'
-    workers       = int(os.environ.get('CRAWLER_WORKERS', '3'))
-    dashboard_url = os.environ.get('DASHBOARD_URL',   'http://localhost:8080')
+    queue_server  = os.environ.get('QUEUE_SERVER',      'localhost:50051')
+    file_server   = os.environ.get('FILE_SERVER',       'localhost:50052')
+    crawler_id    = os.environ.get('CRAWLER_ID',        'crawler-1')
+    max_urls      = int(os.environ.get('MAX_URLS',      '200'))
+    should_seed   = os.environ.get('SEED_URLS',         'false').lower() == 'true'
+    dashboard_url = os.environ.get('DASHBOARD_URL',     'http://localhost:8080')
 
-    crawler = RankedCrawler(crawler_id, queue_server, file_server, max_workers=workers)
+    # CRAWLER_WORKERS overrides auto-scaling if you want manual control.
+    # Leave unset to let each machine auto-detect its own CPU count.
+    workers_env = os.environ.get('CRAWLER_WORKERS')
+    max_workers = int(workers_env) if workers_env else None
 
-    # Start metrics reporter as a background daemon thread.
-    # It sends RTT data to the dashboard every 5s so /monitor
-    # shows this machine alongside the others. Stops automatically
-    # when the main process exits.
+    crawler = RankedCrawler(crawler_id, queue_server, file_server,
+                            max_workers=max_workers)
+
     reporter = MetricsReporter(
         crawler_id    = crawler_id,
         dashboard_url = dashboard_url,
@@ -1080,6 +1125,7 @@ def main():
     finally:
         reporter.stop()
         crawler.close()
- 
+
+
 if __name__ == '__main__':
     main()

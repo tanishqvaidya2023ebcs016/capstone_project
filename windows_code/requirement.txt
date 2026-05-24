@@ -1,0 +1,6 @@
+grpcio==1.76.0
+grpcio-tools==1.76.0
+requests==2.33.1
+beautifulsoup4==4.13.4
+urllib3==2.5.0
+flask==3.1.3

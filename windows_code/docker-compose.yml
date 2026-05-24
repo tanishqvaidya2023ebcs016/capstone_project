@@ -1,0 +1,29 @@
+version: '3.8'
+
+# ============================================================
+#  Shivam's Windows — crawler only
+#
+#  Both servers (queue + file) point to Tanishq's Mac
+#  via Tailscale. The local file-server is removed — all
+#  crawled links go directly to Tanishq's SQLite DB.
+#
+#  Replace 100.109.122.26 with Tanishq's actual Tailscale IP
+#  (Tanishq runs:  tailscale ip -4)
+# ============================================================
+
+services:
+  crawler-windows:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    container_name: crawler-windows
+    environment:
+      # ↓ Tanishq's Mac Tailscale IP — change if it changes
+      - QUEUE_SERVER=100.109.122.26:50051
+      - FILE_SERVER=100.109.122.26:50052    # ← was file-server:50052 (local)
+                                             #   now points to Mac directly
+      - CRAWLER_ID=crawler-windows
+      - MAX_URLS=300
+      - SEED_URLS=false                      # Mac already seeds; keep false
+      - CRAWLER_WORKERS=3
+    restart: unless-stopped

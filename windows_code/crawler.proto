@@ -1,0 +1,103 @@
+syntax = "proto3";
+
+package crawler;
+
+// ---- Queue Service (runs on Mac) ----
+service QueueService {
+    // Get next URL to crawl (atomically dequeues)
+    rpc GetNextURL(GetNextURLRequest) returns (GetNextURLResponse);
+
+    // Add discovered URLs to the queue
+    rpc AddURLs(AddURLsRequest) returns (AddURLsResponse);
+
+    // Mark a URL as visited (dedup)
+    rpc MarkVisited(MarkVisitedRequest) returns (MarkVisitedResponse);
+
+    // Check if a URL has been visited
+    rpc IsVisited(IsVisitedRequest) returns (IsVisitedResponse);
+
+    // Seed initial URLs
+    rpc SeedURLs(SeedURLsRequest) returns (SeedURLsResponse);
+
+    // Get stats
+    rpc GetStats(GetStatsRequest) returns (GetStatsResponse);
+}
+
+// ---- File Service (runs on Windows) ----
+service FileService {
+    // Store a crawled link to the text file
+    rpc StoreLink(StoreLinkRequest) returns (StoreLinkResponse);
+
+    // Store multiple links
+    rpc StoreLinks(StoreLinksRequest) returns (StoreLinksResponse);
+}
+
+// ---- Messages ----
+
+message GetNextURLRequest {
+    string crawler_id = 1;
+}
+
+message GetNextURLResponse {
+    string url = 1;
+    bool queue_empty = 2;
+}
+
+message AddURLsRequest {
+    repeated string urls = 1;
+    string crawler_id = 2;
+}
+
+message AddURLsResponse {
+    int32 added_count = 1;
+}
+
+message MarkVisitedRequest {
+    string url = 1;
+    string crawler_id = 2;
+}
+
+message MarkVisitedResponse {
+    bool success = 1;
+}
+
+message IsVisitedRequest {
+    string url = 1;
+}
+
+message IsVisitedResponse {
+    bool visited = 1;
+}
+
+message SeedURLsRequest {
+    repeated string urls = 1;
+}
+
+message SeedURLsResponse {
+    int32 seeded_count = 1;
+}
+
+message GetStatsRequest {}
+
+message GetStatsResponse {
+    int32 queue_size = 1;
+    int32 visited_count = 2;
+}
+
+message StoreLinkRequest {
+    string url = 1;
+    string crawler_id = 2;
+    int64 timestamp = 1000;
+}
+
+message StoreLinkResponse {
+    bool success = 1;
+}
+
+message StoreLinksRequest {
+    repeated StoreLinkRequest links = 1;
+}
+
+message StoreLinksResponse {
+    int32 stored_count = 1;
+}

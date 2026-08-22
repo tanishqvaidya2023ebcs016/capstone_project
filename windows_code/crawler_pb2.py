@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcrawler.proto\x12\x07\x63rawler\"\'\n\x11GetNextURLRequest\x12\x12\n\ncrawler_id\x18\x01 \x01(\t\"6\n\x12GetNextURLResponse\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x13\n\x0bqueue_empty\x18\x02 \x01(\x08\"2\n\x0e\x41\x64\x64URLsRequest\x12\x0c\n\x04urls\x18\x01 \x03(\t\x12\x12\n\ncrawler_id\x18\x02 \x01(\t\"&\n\x0f\x41\x64\x64URLsResponse\x12\x13\n\x0b\x61\x64\x64\x65\x64_count\x18\x01 \x01(\x05\"5\n\x12MarkVisitedRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x12\n\ncrawler_id\x18\x02 \x01(\t\"&\n\x13MarkVisitedResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"\x1f\n\x10IsVisitedRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\"$\n\x11IsVisitedResponse\x12\x0f\n\x07visited\x18\x01 \x01(\x08\"\x1f\n\x0fSeedURLsRequest\x12\x0c\n\x04urls\x18\x01 \x03(\t\"(\n\x10SeedURLsResponse\x12\x14\n\x0cseeded_count\x18\x01 \x01(\x05\"\x11\n\x0fGetStatsRequest\"=\n\x10GetStatsResponse\x12\x12\n\nqueue_size\x18\x01 \x01(\x05\x12\x15\n\rvisited_count\x18\x02 \x01(\x05\"G\n\x10StoreLinkRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x12\n\ncrawler_id\x18\x02 \x01(\t\x12\x12\n\ttimestamp\x18\xe8\x07 \x01(\x03\"$\n\x11StoreLinkResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"=\n\x11StoreLinksRequest\x12(\n\x05links\x18\x01 \x03(\x0b\x32\x19.crawler.StoreLinkRequest\"*\n\x12StoreLinksResponse\x12\x14\n\x0cstored_count\x18\x01 \x01(\x05\x32\xa3\x03\n\x0cQueueService\x12\x45\n\nGetNextURL\x12\x1a.crawler.GetNextURLRequest\x1a\x1b.crawler.GetNextURLResponse\x12<\n\x07\x41\x64\x64URLs\x12\x17.crawler.AddURLsRequest\x1a\x18.crawler.AddURLsResponse\x12H\n\x0bMarkVisited\x12\x1b.crawler.MarkVisitedRequest\x1a\x1c.crawler.MarkVisitedResponse\x12\x42\n\tIsVisited\x12\x19.crawler.IsVisitedRequest\x1a\x1a.crawler.IsVisitedResponse\x12?\n\x08SeedURLs\x12\x18.crawler.SeedURLsRequest\x1a\x19.crawler.SeedURLsResponse\x12?\n\x08GetStats\x12\x18.crawler.GetStatsRequest\x1a\x19.crawler.GetStatsResponse2\x98\x01\n\x0b\x46ileService\x12\x42\n\tStoreLink\x12\x19.crawler.StoreLinkRequest\x1a\x1a.crawler.StoreLinkResponse\x12\x45\n\nStoreLinks\x12\x1a.crawler.StoreLinksRequest\x1a\x1b.crawler.StoreLinksResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rcrawler.proto\x12\x07\x63rawler\"\'\n\x11GetNextURLRequest\x12\x12\n\ncrawler_id\x18\x01 \x01(\t\"6\n\x12GetNextURLResponse\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x13\n\x0bqueue_empty\x18\x02 \x01(\x08\"2\n\x0e\x41\x64\x64URLsRequest\x12\x0c\n\x04urls\x18\x01 \x03(\t\x12\x12\n\ncrawler_id\x18\x02 \x01(\t\"&\n\x0f\x41\x64\x64URLsResponse\x12\x13\n\x0b\x61\x64\x64\x65\x64_count\x18\x01 \x01(\x05\"5\n\x12MarkVisitedRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x12\n\ncrawler_id\x18\x02 \x01(\t\"&\n\x13MarkVisitedResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"\x1f\n\x10IsVisitedRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\"$\n\x11IsVisitedResponse\x12\x0f\n\x07visited\x18\x01 \x01(\x08\"\x1f\n\x0fSeedURLsRequest\x12\x0c\n\x04urls\x18\x01 \x03(\t\"(\n\x10SeedURLsResponse\x12\x14\n\x0cseeded_count\x18\x01 \x01(\x05\"\x11\n\x0fGetStatsRequest\"=\n\x10GetStatsResponse\x12\x12\n\nqueue_size\x18\x01 \x01(\x05\x12\x15\n\rvisited_count\x18\x02 \x01(\x05\"f\n\x10StoreLinkRequest\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x12\n\ncrawler_id\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\x02\x12\x0e\n\x06\x64omain\x18\x04 \x01(\t\x12\x12\n\ttimestamp\x18\xe8\x07 \x01(\x03\"$\n\x11StoreLinkResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"=\n\x11StoreLinksRequest\x12(\n\x05links\x18\x01 \x03(\x0b\x32\x19.crawler.StoreLinkRequest\"*\n\x12StoreLinksResponse\x12\x14\n\x0cstored_count\x18\x01 \x01(\x05\x32\xa3\x03\n\x0cQueueService\x12\x45\n\nGetNextURL\x12\x1a.crawler.GetNextURLRequest\x1a\x1b.crawler.GetNextURLResponse\x12<\n\x07\x41\x64\x64URLs\x12\x17.crawler.AddURLsRequest\x1a\x18.crawler.AddURLsResponse\x12H\n\x0bMarkVisited\x12\x1b.crawler.MarkVisitedRequest\x1a\x1c.crawler.MarkVisitedResponse\x12\x42\n\tIsVisited\x12\x19.crawler.IsVisitedRequest\x1a\x1a.crawler.IsVisitedResponse\x12?\n\x08SeedURLs\x12\x18.crawler.SeedURLsRequest\x1a\x19.crawler.SeedURLsResponse\x12?\n\x08GetStats\x12\x18.crawler.GetStatsRequest\x1a\x19.crawler.GetStatsResponse2\x98\x01\n\x0b\x46ileService\x12\x42\n\tStoreLink\x12\x19.crawler.StoreLinkRequest\x1a\x1a.crawler.StoreLinkResponse\x12\x45\n\nStoreLinks\x12\x1a.crawler.StoreLinksRequest\x1a\x1b.crawler.StoreLinksResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -56,15 +56,15 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_GETSTATSRESPONSE']._serialized_start=475
   _globals['_GETSTATSRESPONSE']._serialized_end=536
   _globals['_STORELINKREQUEST']._serialized_start=538
-  _globals['_STORELINKREQUEST']._serialized_end=609
-  _globals['_STORELINKRESPONSE']._serialized_start=611
-  _globals['_STORELINKRESPONSE']._serialized_end=647
-  _globals['_STORELINKSREQUEST']._serialized_start=649
-  _globals['_STORELINKSREQUEST']._serialized_end=710
-  _globals['_STORELINKSRESPONSE']._serialized_start=712
-  _globals['_STORELINKSRESPONSE']._serialized_end=754
-  _globals['_QUEUESERVICE']._serialized_start=757
-  _globals['_QUEUESERVICE']._serialized_end=1176
-  _globals['_FILESERVICE']._serialized_start=1179
-  _globals['_FILESERVICE']._serialized_end=1331
+  _globals['_STORELINKREQUEST']._serialized_end=640
+  _globals['_STORELINKRESPONSE']._serialized_start=642
+  _globals['_STORELINKRESPONSE']._serialized_end=678
+  _globals['_STORELINKSREQUEST']._serialized_start=680
+  _globals['_STORELINKSREQUEST']._serialized_end=741
+  _globals['_STORELINKSRESPONSE']._serialized_start=743
+  _globals['_STORELINKSRESPONSE']._serialized_end=785
+  _globals['_QUEUESERVICE']._serialized_start=788
+  _globals['_QUEUESERVICE']._serialized_end=1207
+  _globals['_FILESERVICE']._serialized_start=1210
+  _globals['_FILESERVICE']._serialized_end=1362
 # @@protoc_insertion_point(module_scope)

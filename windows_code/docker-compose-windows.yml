@@ -1,0 +1,23 @@
+services:
+  redis-replica:
+    image: redis:7-alpine
+    container_name: windows-redis
+    ports:
+      - "127.0.0.1:6380:6380"
+    volumes:
+      - ./redis/conf:/conf
+      - ./redis/data:/data
+      - ./redis/logs:/logs
+    command: redis-server /conf/redis.conf
+    restart: unless-stopped
+
+  sentinel:
+    image: redis:7-alpine
+    container_name: windows-sentinel
+    ports:
+      - "127.0.0.1:26379:26379"
+    volumes:
+      - ./redis/conf:/conf
+    command: redis-sentinel /conf/sentinel.conf
+    restart: unless-stopped
+

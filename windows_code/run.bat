@@ -1,17 +1,12 @@
 @echo off
 REM ================================================================
-REM  Shivam's Windows — Crawler
-REM
-REM  BEFORE RUNNING:
-REM  1. Ask Tanishq to run on his Mac:   tailscale ip -4
-REM  2. Paste that IP below (MAC_IP)
-REM  3. Double-click this file to start
+REM  Shivam's Windows — Crawler (with HA failover)
 REM ================================================================
 
 SET MAC_IP=100.109.122.26
 
 REM ---- Do not edit below this line ----
-SET QUEUE_SERVER=%MAC_IP%:50051
+SET QUEUE_SERVERS=%MAC_IP%:50051,127.0.0.1:50051, 100.78.1.11:50051
 SET FILE_SERVER=%MAC_IP%:50052
 SET DASHBOARD_URL=http://%MAC_IP%:8080
 SET CRAWLER_ID=crawler-windows
@@ -22,7 +17,7 @@ SET SEED_URLS=false
 echo.
 echo ================================================================
 echo  Machine   : Shivam's Windows
-echo  Queue     : %QUEUE_SERVER%
+echo  Queue     : %QUEUE_SERVERS%
 echo  File      : %FILE_SERVER%
 echo  Dashboard : %DASHBOARD_URL%
 echo  ID        : %CRAWLER_ID%

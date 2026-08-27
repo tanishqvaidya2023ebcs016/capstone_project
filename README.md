@@ -20,7 +20,7 @@ CrawlerX is a distributed system built to solve the problem of information overl
 
 | Layer | Technology |
 | :--- | :--- |
-| **Language** | Python 3.11+ |
+| **Language** | Python 3.12+ |
 | **Communication** | gRPC / Protobuf |
 | **Queue & Dedup** | Redis (with Sentinel) |
 | **Scraping/Extraction** | `requests`, `BeautifulSoup`, `dateparser` |
